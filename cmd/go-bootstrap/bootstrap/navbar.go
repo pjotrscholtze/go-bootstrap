@@ -63,7 +63,7 @@ func NavBar(id string, color BsColor, location BsLocation, collapsable *Collapse
 	return &htmlwrapper.HTMLElm{
 		Tag: "nav",
 		Attrs: map[string]string{
-			"class": "navbar-expand-lg navbar-" + string(color) + " bg-" + string(color),
+			"class": "navbar navbar-expand-lg navbar-" + string(color) + " bg-" + string(color),
 		},
 		Contents: []htmlwrapper.Elm{&htmlwrapper.HTMLElm{
 			Tag: "div",
