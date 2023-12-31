@@ -33,18 +33,22 @@ func recursivelyMakeNavLink(ni *NavItem) htmlwrapper.Elm {
 
 func Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem) htmlwrapper.Elm {
 	attrs := map[string]string{
-		"class": "nav " + string(tabKind) + " " + string(justifyContent),
+		"class": "nav navbar-nav " + string(tabKind) + " " + string(justifyContent),
 	}
 	if vertical {
 		attrs["class"] += " flex-column"
 	}
 	navContents := make([]htmlwrapper.Elm, len(content))
-	tag := "nav"
+	out := &htmlwrapper.HTMLElm{
+		Tag:      "nav",
+		Attrs:    attrs,
+		Contents: navContents,
+	}
 	for i, item := range content {
 		navContents[i] = recursivelyMakeNavLink(item)
 	}
 	if ulElement {
-		tag = "ul"
+		out.Tag = "ul"
 		for i, item := range navContents {
 			navContents[i] = &htmlwrapper.HTMLElm{
 				Tag: "li",
@@ -55,11 +59,7 @@ func Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind B
 			}
 		}
 	}
-	return &htmlwrapper.HTMLElm{
-		Tag:      tag,
-		Attrs:    attrs,
-		Contents: navContents,
-	}
+	return out
 }
 
 func NavLink(isDropdownToggle bool, navState BsNavState, content htmlwrapper.Elm, dropdownContent htmlwrapper.Elm, href *string) htmlwrapper.Elm {
