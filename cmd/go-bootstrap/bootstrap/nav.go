@@ -25,6 +25,7 @@ func recursivelyMakeNavLink(ni *NavItem) htmlwrapper.Elm {
 	return NavLink(
 		len(*ni.DropDownItems) > 0,
 		ni.NavState,
+		ni.Content,
 		&htmlwrapper.MultiElm{Contents: content},
 		ni.Href,
 	)
@@ -61,7 +62,7 @@ func Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind B
 	}
 }
 
-func NavLink(isDropdownToggle bool, navState BsNavState, content htmlwrapper.Elm, href *string) htmlwrapper.Elm {
+func NavLink(isDropdownToggle bool, navState BsNavState, content htmlwrapper.Elm, dropdownContent htmlwrapper.Elm, href *string) htmlwrapper.Elm {
 	addClass := ""
 	if navState != BsNavStateNormal {
 		addClass += " " + string(navState)
@@ -80,12 +81,21 @@ func NavLink(isDropdownToggle bool, navState BsNavState, content htmlwrapper.Elm
 		attrs["role"] = "button"
 		attrs["aria-haspopup"] = "true"
 		attrs["aria-expanded"] = "false"
-		content = &htmlwrapper.HTMLElm{
-			Tag: "div",
-			Attrs: map[string]string{
-				"class": "dropdown-menu",
+		return &htmlwrapper.MultiElm{
+			Contents: []htmlwrapper.Elm{
+				&htmlwrapper.HTMLElm{
+					Tag:      "a",
+					Attrs:    attrs,
+					Contents: []htmlwrapper.Elm{content},
+				},
+				&htmlwrapper.HTMLElm{
+					Tag: "div",
+					Attrs: map[string]string{
+						"class": "dropdown-menu",
+					},
+					Contents: []htmlwrapper.Elm{dropdownContent},
+				},
 			},
-			Contents: []htmlwrapper.Elm{content},
 		}
 	}
 	return &htmlwrapper.HTMLElm{
