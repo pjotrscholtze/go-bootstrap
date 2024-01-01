@@ -1089,13 +1089,6 @@ func TestButtonSecondarySubmitContentSmallActiveTooltipContent(t *testing.T) {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
-
-// // // // // // // // // // // // // // // // // // // // // // // // // // //
-// // // // // // // // // // // // // // // // // // // // // // // // // // //
-// // // // // // // // // // // // // // // // // // // // // // // // // // //
-// // // // // // // // // // // // // // // // // // // // // // // // // // //
-// // // // // // // // // // // // // // // // // // // // // // // // // // //
-// // // // // // // // // // // // // // // // // // // // // // // // // // //
 func TestButtonCheckbox(t *testing.T) {
 	// ButtonCheckbox(checkbox bool, id string, value string, btnType BsBtnStyle, size BsBtnSize)
 	html, err := ButtonCheckbox(false, "id", "value", BsBtnPrimary, BsBtnLg).AsHTML()
@@ -1444,6 +1437,1167 @@ func TestButtonCheckboxCheckboxIdValueSecondarySize(t *testing.T) {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
 	if html != "<input autocomplete=\"off\" class=\"btn-check\" id=\"idOther\" type=\"checkbox\"></input><label class=\"btn btn-secondary btn-sm\" for=\"idOther\">value2</label>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+///////////////////////
+
+func TestButtonAnchor(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondary(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmit(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmit(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text2", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text2", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSmall(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySmall(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitSmall(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitSmall(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorContentSmall(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryContentSmall(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitContentSmall(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text2", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitContentSmall(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text2", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorContentActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryContentActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitContentActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text2", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitContentActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text2", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSmallActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySmallActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitSmallActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitSmallActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorContentSmallActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryContentSmallActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitContentSmallActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text2", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitContentSmallActive(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text2", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorContentTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryContentTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitContentTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitContentTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSmallTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySmallTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitSmallTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitSmallTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorContentSmallTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryContentSmallTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitContentSmallTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitContentSmallTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorContentActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryContentActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitContentActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitContentActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSmallActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySmallActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitSmallActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitSmallActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorContentSmallActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryContentSmallActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitContentSmallActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitContentSmallActiveTooltip(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorContentTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryContentTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitContentTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitContentTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSmallTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySmallTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitSmallTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitSmallTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorContentSmallTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryContentSmallTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitContentSmallTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitContentSmallTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorContentActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryContentActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitContentActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitContentActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSmallActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySmallActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitSmallActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitSmallActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorContentSmallActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondaryContentSmallActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSubmitContentSmallActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnSubmit, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-primary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitContentSmallActiveTooltipContent(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnSubmit, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestButtonAnchorSecondarySubmitContentSmallActiveTooltipContent2(t *testing.T) {
+	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
+	content := "content"
+	html, err := ButtonAnchor("LinkHere2", BsBtnSecondary, BsBtnSubmit, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere2\" title=\"title\" value=\"text2\"></a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }

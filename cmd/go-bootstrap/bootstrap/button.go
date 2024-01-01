@@ -25,6 +25,30 @@ func Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, sta
 		Contents: []htmlwrapper.Elm{},
 	}
 }
+func ButtonAnchor(href string, btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover) htmlwrapper.Elm {
+	attrs := map[string]string{
+		"class": "btn " + string(btnType) + " " + string(size),
+		"value": text,
+		"href":  href,
+	}
+	if state == BsBtnStateDisabled {
+		attrs["disabled"] = "disabled"
+		attrs["aria-disabled"] = "true"
+	} else if state == BsBtnStateActive {
+		attrs["class"] += " active"
+	}
+	if popover != nil {
+		attrs["title"] = popover.Title
+		if popover.Content != nil {
+			attrs["data-content"] = *popover.Content
+		}
+	}
+	return &htmlwrapper.HTMLElm{
+		Tag:      "a",
+		Attrs:    attrs,
+		Contents: []htmlwrapper.Elm{},
+	}
+}
 
 func ButtonCheckbox(checkbox bool, id string, value string, btnType BsBtnStyle, size BsBtnSize) htmlwrapper.Elm {
 	inputType := "radio"
