@@ -51,7 +51,7 @@ func Input(kind BsInputType, id, name string, placeholder, value *string, size B
 	out := &htmlwrapper.HTMLElm{
 		Tag: "input",
 		Attrs: map[string]string{
-			"type": string(kind) + string(size) + plaintextStr,
+			"type": "form-control " + string(kind) + string(size) + plaintextStr,
 			"id":   id,
 			"name": name,
 		},

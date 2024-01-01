@@ -101,7 +101,7 @@ func TestInput(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<input id=\"id\" name=\"name\" placeholder=\"placeholder\" type=\"text\" value=\"value\"></input>" {
+	if html != "<input id=\"id\" name=\"name\" placeholder=\"placeholder\" type=\"form-control text\" value=\"value\"></input>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -114,7 +114,7 @@ func TestInputContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<input id=\"identifier\" name=\"email\" placeholder=\"text\" type=\"email form-control-sm\" value=\"asfasdfsadf\"></input>" {
+	if html != "<input id=\"identifier\" name=\"email\" placeholder=\"text\" type=\"form-control email form-control-sm\" value=\"asfasdfsadf\"></input>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -127,7 +127,7 @@ func TestInputContentReadonly(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<input id=\"identifier\" name=\"email\" placeholder=\"text\" readonly=\"readonly\" type=\"email form-control-sm\" value=\"asfasdfsadf\"></input>" {
+	if html != "<input id=\"identifier\" name=\"email\" placeholder=\"text\" readonly=\"readonly\" type=\"form-control email form-control-sm\" value=\"asfasdfsadf\"></input>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -140,7 +140,7 @@ func TestInputContentPlaintext(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<input id=\"identifier\" name=\"email\" placeholder=\"text\" type=\"email form-control-sm form-control-plaintext\" value=\"asfasdfsadf\"></input>" {
+	if html != "<input id=\"identifier\" name=\"email\" placeholder=\"text\" type=\"form-control email form-control-sm form-control-plaintext\" value=\"asfasdfsadf\"></input>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -153,7 +153,7 @@ func TestInputContentChecked(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<input checked=\"checked\" id=\"identifier\" name=\"email\" placeholder=\"text\" type=\"email form-control-sm\" value=\"asfasdfsadf\"></input>" {
+	if html != "<input checked=\"checked\" id=\"identifier\" name=\"email\" placeholder=\"text\" type=\"form-control email form-control-sm\" value=\"asfasdfsadf\"></input>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
