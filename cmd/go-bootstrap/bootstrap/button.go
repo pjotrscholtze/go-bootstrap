@@ -28,7 +28,6 @@ func Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, sta
 func ButtonAnchor(href string, btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover) htmlwrapper.Elm {
 	attrs := map[string]string{
 		"class": "btn " + string(btnType) + " " + string(size),
-		"value": text,
 		"href":  href,
 	}
 	if state == BsBtnStateDisabled {
@@ -44,9 +43,11 @@ func ButtonAnchor(href string, btnType BsBtnStyle, kind BsBtnKind, text string, 
 		}
 	}
 	return &htmlwrapper.HTMLElm{
-		Tag:      "a",
-		Attrs:    attrs,
-		Contents: []htmlwrapper.Elm{},
+		Tag:   "a",
+		Attrs: attrs,
+		Contents: []htmlwrapper.Elm{
+			&htmlwrapper.TextElm{Content: text},
+		},
 	}
 }
 

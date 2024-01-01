@@ -1508,7 +1508,7 @@ func TestButtonAnchor(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1519,7 +1519,7 @@ func TestButtonAnchorSecondary(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1530,7 +1530,7 @@ func TestButtonAnchorSubmit(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1541,7 +1541,7 @@ func TestButtonAnchorSecondarySubmit(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1552,7 +1552,7 @@ func TestButtonAnchorContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1563,7 +1563,7 @@ func TestButtonAnchorSecondaryContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1574,7 +1574,7 @@ func TestButtonAnchorSubmitContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1585,7 +1585,7 @@ func TestButtonAnchorSecondarySubmitContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1596,7 +1596,7 @@ func TestButtonAnchorSmall(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1607,7 +1607,7 @@ func TestButtonAnchorSecondarySmall(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1618,7 +1618,7 @@ func TestButtonAnchorSubmitSmall(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1629,7 +1629,7 @@ func TestButtonAnchorSecondarySubmitSmall(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1640,7 +1640,7 @@ func TestButtonAnchorContentSmall(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1651,7 +1651,7 @@ func TestButtonAnchorSecondaryContentSmall(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1662,7 +1662,7 @@ func TestButtonAnchorSubmitContentSmall(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1673,7 +1673,7 @@ func TestButtonAnchorSecondarySubmitContentSmall(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1684,7 +1684,7 @@ func TestButtonAnchorActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1695,7 +1695,7 @@ func TestButtonAnchorSecondaryActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1706,7 +1706,7 @@ func TestButtonAnchorSubmitActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1717,7 +1717,7 @@ func TestButtonAnchorSecondarySubmitActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1728,7 +1728,7 @@ func TestButtonAnchorContentActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1739,7 +1739,7 @@ func TestButtonAnchorSecondaryContentActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1750,7 +1750,7 @@ func TestButtonAnchorSubmitContentActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1761,7 +1761,7 @@ func TestButtonAnchorSecondarySubmitContentActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1772,7 +1772,7 @@ func TestButtonAnchorSmallActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1783,7 +1783,7 @@ func TestButtonAnchorSecondarySmallActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1794,7 +1794,7 @@ func TestButtonAnchorSubmitSmallActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1805,7 +1805,7 @@ func TestButtonAnchorSecondarySubmitSmallActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1816,7 +1816,7 @@ func TestButtonAnchorContentSmallActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1827,7 +1827,7 @@ func TestButtonAnchorSecondaryContentSmallActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1838,7 +1838,7 @@ func TestButtonAnchorSubmitContentSmallActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1849,7 +1849,7 @@ func TestButtonAnchorSecondarySubmitContentSmallActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1860,7 +1860,7 @@ func TestButtonAnchorTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1871,7 +1871,7 @@ func TestButtonAnchorSecondaryTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1882,7 +1882,7 @@ func TestButtonAnchorSubmitTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1893,7 +1893,7 @@ func TestButtonAnchorSecondarySubmitTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1904,7 +1904,7 @@ func TestButtonAnchorContentTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1915,7 +1915,7 @@ func TestButtonAnchorSecondaryContentTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1926,7 +1926,7 @@ func TestButtonAnchorSubmitContentTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1937,7 +1937,7 @@ func TestButtonAnchorSecondarySubmitContentTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1948,7 +1948,7 @@ func TestButtonAnchorSmallTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1959,7 +1959,7 @@ func TestButtonAnchorSecondarySmallTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1970,7 +1970,7 @@ func TestButtonAnchorSubmitSmallTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1981,7 +1981,7 @@ func TestButtonAnchorSecondarySubmitSmallTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -1992,7 +1992,7 @@ func TestButtonAnchorContentSmallTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2003,7 +2003,7 @@ func TestButtonAnchorSecondaryContentSmallTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2014,7 +2014,7 @@ func TestButtonAnchorSubmitContentSmallTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2025,7 +2025,7 @@ func TestButtonAnchorSecondarySubmitContentSmallTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2036,7 +2036,7 @@ func TestButtonAnchorActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2047,7 +2047,7 @@ func TestButtonAnchorSecondaryActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2058,7 +2058,7 @@ func TestButtonAnchorSubmitActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2069,7 +2069,7 @@ func TestButtonAnchorSecondarySubmitActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2080,7 +2080,7 @@ func TestButtonAnchorContentActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2091,7 +2091,7 @@ func TestButtonAnchorSecondaryContentActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2102,7 +2102,7 @@ func TestButtonAnchorSubmitContentActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg active\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2113,7 +2113,7 @@ func TestButtonAnchorSecondarySubmitContentActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg active\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2124,7 +2124,7 @@ func TestButtonAnchorSmallActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2135,7 +2135,7 @@ func TestButtonAnchorSecondarySmallActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2146,7 +2146,7 @@ func TestButtonAnchorSubmitSmallActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2157,7 +2157,7 @@ func TestButtonAnchorSecondarySubmitSmallActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2168,7 +2168,7 @@ func TestButtonAnchorContentSmallActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2179,7 +2179,7 @@ func TestButtonAnchorSecondaryContentSmallActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2190,7 +2190,7 @@ func TestButtonAnchorSubmitContentSmallActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm active\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2201,7 +2201,7 @@ func TestButtonAnchorSecondarySubmitContentSmallActiveTooltip(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm active\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2213,7 +2213,7 @@ func TestButtonAnchorTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2225,7 +2225,7 @@ func TestButtonAnchorSecondaryTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2237,7 +2237,7 @@ func TestButtonAnchorSubmitTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2249,7 +2249,7 @@ func TestButtonAnchorSecondarySubmitTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2261,7 +2261,7 @@ func TestButtonAnchorContentTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2273,7 +2273,7 @@ func TestButtonAnchorSecondaryContentTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2285,7 +2285,7 @@ func TestButtonAnchorSubmitContentTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2297,7 +2297,7 @@ func TestButtonAnchorSecondarySubmitContentTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2309,7 +2309,7 @@ func TestButtonAnchorSmallTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2321,7 +2321,7 @@ func TestButtonAnchorSecondarySmallTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2333,7 +2333,7 @@ func TestButtonAnchorSubmitSmallTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2345,7 +2345,7 @@ func TestButtonAnchorSecondarySubmitSmallTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2357,7 +2357,7 @@ func TestButtonAnchorContentSmallTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2369,7 +2369,7 @@ func TestButtonAnchorSecondaryContentSmallTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2381,7 +2381,7 @@ func TestButtonAnchorSubmitContentSmallTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2393,7 +2393,7 @@ func TestButtonAnchorSecondarySubmitContentSmallTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2405,7 +2405,7 @@ func TestButtonAnchorActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2417,7 +2417,7 @@ func TestButtonAnchorSecondaryActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2429,7 +2429,7 @@ func TestButtonAnchorSubmitActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2441,7 +2441,7 @@ func TestButtonAnchorSecondarySubmitActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2453,7 +2453,7 @@ func TestButtonAnchorContentActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2465,7 +2465,7 @@ func TestButtonAnchorSecondaryContentActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2477,7 +2477,7 @@ func TestButtonAnchorSubmitContentActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2489,7 +2489,7 @@ func TestButtonAnchorSecondarySubmitContentActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-lg active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2501,7 +2501,7 @@ func TestButtonAnchorSmallActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2513,7 +2513,7 @@ func TestButtonAnchorSecondarySmallActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2525,7 +2525,7 @@ func TestButtonAnchorSubmitSmallActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2537,7 +2537,7 @@ func TestButtonAnchorSecondarySubmitSmallActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2549,7 +2549,7 @@ func TestButtonAnchorContentSmallActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2561,7 +2561,7 @@ func TestButtonAnchorSecondaryContentSmallActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2573,7 +2573,7 @@ func TestButtonAnchorSubmitContentSmallActiveTooltipContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-primary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-primary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2585,7 +2585,7 @@ func TestButtonAnchorSecondarySubmitContentSmallActiveTooltipContent(t *testing.
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -2597,7 +2597,7 @@ func TestButtonAnchorSecondarySubmitContentSmallActiveTooltipContent2(t *testing
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere2\" title=\"title\" value=\"text2\"></a>" {
+	if html != "<a class=\"btn btn-secondary btn-sm active\" data-content=\"content\" href=\"LinkHere2\" title=\"title\">text2</a>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
