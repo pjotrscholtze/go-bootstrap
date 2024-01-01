@@ -15,6 +15,7 @@ type SelectBuilder interface {
 	AsElm() htmlwrapper.Elm
 	AddEntry(value, content string, disabled bool) SelectBuilder
 	SetLabel(label *string) SelectBuilder
+	SetName(name string) SelectBuilder
 	SetSelectedItem(selectedItem *string) SelectBuilder
 }
 
@@ -24,6 +25,7 @@ type selectBuilder struct {
 	required     bool
 	label        *string
 	selectedItem *string
+	name         string
 }
 
 func (sb *selectBuilder) SetSelectedItem(selectedItem *string) SelectBuilder {
@@ -31,6 +33,10 @@ func (sb *selectBuilder) SetSelectedItem(selectedItem *string) SelectBuilder {
 	return sb
 }
 
+func (sb *selectBuilder) SetName(name string) SelectBuilder {
+	sb.name = name
+	return sb
+}
 func (sb *selectBuilder) SetLabel(label *string) SelectBuilder {
 	sb.label = label
 	return sb
@@ -48,6 +54,7 @@ func (sb *selectBuilder) AsElm() htmlwrapper.Elm {
 	out := &htmlwrapper.HTMLElm{
 		Tag: "select",
 		Attrs: map[string]string{
+			"name":  sb.name,
 			"class": "form-select",
 			"id":    sb.id,
 		},
@@ -100,5 +107,6 @@ func NewSelect() SelectBuilder {
 	return &selectBuilder{
 		items: []selectItem{},
 		id:    "",
+		name:  "",
 	}
 }
