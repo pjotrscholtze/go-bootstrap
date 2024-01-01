@@ -15,7 +15,7 @@ func TestNavContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav  \"><a class=\"nav-link\" href=\"#\">test</a></nav>" {
+	if html != "<nav class=\"navbar-nav  \"><a class=\"nav-link\" href=\"#\">test</a></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -30,7 +30,7 @@ func TestNavContentHref(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav  \"><a class=\"nav-link\" href=\"link\">test</a></nav>" {
+	if html != "<nav class=\"navbar-nav  \"><a class=\"nav-link\" href=\"link\">test</a></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -46,7 +46,7 @@ func TestNavContentHrefDisabled(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav  \"><a class=\"nav-link disabled\" href=\"link\">test</a></nav>" {
+	if html != "<nav class=\"navbar-nav  \"><a class=\"nav-link disabled\" href=\"link\">test</a></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -62,7 +62,7 @@ func TestNavContentHrefActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav  \"><a class=\"nav-link active\" href=\"link\">test</a></nav>" {
+	if html != "<nav class=\"navbar-nav  \"><a class=\"nav-link active\" href=\"link\">test</a></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -73,7 +73,7 @@ func TestNav(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav  \"></nav>" {
+	if html != "<nav class=\"navbar-nav  \"></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -84,7 +84,7 @@ func TestNavUl(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<ul class=\"nav  \"></ul>" {
+	if html != "<ul class=\"navbar-nav  \"></ul>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -95,7 +95,7 @@ func TestNavVertical(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav   flex-column\"></nav>" {
+	if html != "<nav class=\"navbar-nav   flex-column\"></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -106,7 +106,7 @@ func TestNavJustifyCenter(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav  justify-content-center\"></nav>" {
+	if html != "<nav class=\"navbar-nav  justify-content-center\"></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -117,7 +117,7 @@ func TestNavUlJustifyCenter(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<ul class=\"nav  justify-content-center\"></ul>" {
+	if html != "<ul class=\"navbar-nav  justify-content-center\"></ul>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -128,7 +128,7 @@ func TestNavVerticalJustifyCenter(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav  justify-content-center flex-column\"></nav>" {
+	if html != "<nav class=\"navbar-nav  justify-content-center flex-column\"></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -139,7 +139,7 @@ func TestNavUlVerticalJustifyCenter(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<ul class=\"nav  justify-content-center flex-column\"></ul>" {
+	if html != "<ul class=\"navbar-nav  justify-content-center flex-column\"></ul>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -150,7 +150,7 @@ func TestNavPills(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav nav-pills \"></nav>" {
+	if html != "<nav class=\"navbar-nav nav-pills \"></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -161,7 +161,7 @@ func TestNavUlPills(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<ul class=\"nav nav-pills \"></ul>" {
+	if html != "<ul class=\"navbar-nav nav-pills \"></ul>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -172,7 +172,7 @@ func TestNavVerticalPills(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav nav-pills  flex-column\"></nav>" {
+	if html != "<nav class=\"navbar-nav nav-pills  flex-column\"></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -183,7 +183,7 @@ func TestNavJustifyCenterPills(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav nav-pills justify-content-center\"></nav>" {
+	if html != "<nav class=\"navbar-nav nav-pills justify-content-center\"></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -194,7 +194,7 @@ func TestNavUlJustifyCenterPills(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<ul class=\"nav nav-pills justify-content-center\"></ul>" {
+	if html != "<ul class=\"navbar-nav nav-pills justify-content-center\"></ul>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -205,7 +205,7 @@ func TestNavVerticalJustifyCenterPills(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav nav-pills justify-content-center flex-column\"></nav>" {
+	if html != "<nav class=\"navbar-nav nav-pills justify-content-center flex-column\"></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -216,7 +216,7 @@ func TestNavUlVerticalJustifyCenterPills(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<ul class=\"nav nav-pills justify-content-center flex-column\"></ul>" {
+	if html != "<ul class=\"navbar-nav nav-pills justify-content-center flex-column\"></ul>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -227,7 +227,7 @@ func TestNavTabs(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav nav-tabs \"></nav>" {
+	if html != "<nav class=\"navbar-nav nav-tabs \"></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -238,7 +238,7 @@ func TestNavUlTabs(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<ul class=\"nav nav-tabs \"></ul>" {
+	if html != "<ul class=\"navbar-nav nav-tabs \"></ul>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -249,7 +249,7 @@ func TestNavVerticalTabs(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav nav-tabs  flex-column\"></nav>" {
+	if html != "<nav class=\"navbar-nav nav-tabs  flex-column\"></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -260,7 +260,7 @@ func TestNavJustifyCenterTabs(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav nav-tabs justify-content-center\"></nav>" {
+	if html != "<nav class=\"navbar-nav nav-tabs justify-content-center\"></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -271,7 +271,7 @@ func TestNavUlJustifyCenterTabs(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<ul class=\"nav nav-tabs justify-content-center\"></ul>" {
+	if html != "<ul class=\"navbar-nav nav-tabs justify-content-center\"></ul>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -282,7 +282,7 @@ func TestNavVerticalJustifyCenterTabs(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"nav nav-tabs justify-content-center flex-column\"></nav>" {
+	if html != "<nav class=\"navbar-nav nav-tabs justify-content-center flex-column\"></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -293,7 +293,7 @@ func TestNavUlVerticalJustifyCenterTabs(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<ul class=\"nav nav-tabs justify-content-center flex-column\"></ul>" {
+	if html != "<ul class=\"navbar-nav nav-tabs justify-content-center flex-column\"></ul>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }

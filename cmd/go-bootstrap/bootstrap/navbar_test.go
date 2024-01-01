@@ -46,7 +46,7 @@ func TestNavBar(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"navbar-expand-lg navbar-primary bg-primary\"><div class=\"container-fluid\"></div></nav>" {
+	if html != "<nav class=\"navbar navbar-expand-lg navbar-primary bg-primary\"><div class=\"container-fluid\"></div></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 
@@ -58,7 +58,7 @@ func TestNavBarContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"navbar-expand-lg navbar-primary bg-primary\"><div class=\"container-fluid\">text</div></nav>" {
+	if html != "<nav class=\"navbar navbar-expand-lg navbar-primary bg-primary\"><div class=\"container-fluid\">text</div></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 
@@ -69,7 +69,7 @@ func TestNavBarContentDiffBackground(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"navbar-expand-lg navbar-secondary bg-secondary\"><div class=\"container-fluid\">text</div></nav>" {
+	if html != "<nav class=\"navbar navbar-expand-lg navbar-secondary bg-secondary\"><div class=\"container-fluid\">text</div></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 
@@ -81,7 +81,7 @@ func TestNavBarContentDiffBackgroundFixedBottom(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"navbar-expand-lg navbar-secondary bg-secondary\"><div class=\"container-fluid\">text</div></nav>" {
+	if html != "<nav class=\"navbar navbar-expand-lg navbar-secondary bg-secondary\"><div class=\"container-fluid\">text</div></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 
@@ -93,7 +93,7 @@ func TestNavBarContentDiffBackgroundFixedTop(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"navbar-expand-lg navbar-secondary bg-secondary\"><div class=\"container-fluid\">text</div></nav>" {
+	if html != "<nav class=\"navbar navbar-expand-lg navbar-secondary bg-secondary\"><div class=\"container-fluid\">text</div></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 
@@ -105,7 +105,7 @@ func TestNavBarContentDiffBackgroundStickyTop(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"navbar-expand-lg navbar-secondary bg-secondary\"><div class=\"container-fluid\">text</div></nav>" {
+	if html != "<nav class=\"navbar navbar-expand-lg navbar-secondary bg-secondary\"><div class=\"container-fluid\">text</div></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 
@@ -123,7 +123,7 @@ func TestNavBarContentDiffBackgroundStickyTopCollapseButton(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"navbar-expand-lg navbar-secondary bg-secondary\"><div class=\"container-fluid\"><input aria-controls=\"id\" aria-disabled=\"true\" aria-expanded=\"false\" class=\"btn btn-primary btn-group-sm\" data-target=\"#id\" data-toggle=\"collapse\" disabled=\"disabled\" value=\"\"><span class=\"navbar-toggler-icon\"></span></input><div class=\"collapse navbar-collapse\" id=\"id\">text</div></div></nav>" {
+	if html != "<nav class=\"navbar navbar-expand-lg navbar-secondary bg-secondary\"><div class=\"container-fluid\"><input aria-controls=\"id\" aria-disabled=\"true\" aria-expanded=\"false\" class=\"btn btn-primary btn-group-sm\" data-target=\"#id\" data-toggle=\"collapse\" disabled=\"disabled\" value=\"\"><span class=\"navbar-toggler-icon\"></span></input><div class=\"collapse navbar-collapse\" id=\"id\">text</div></div></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 
