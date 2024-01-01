@@ -157,3 +157,16 @@ func TestInputContentChecked(t *testing.T) {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
+
+func TestInputContentCheckedCheckbox(t *testing.T) {
+	// Input(kind BsInputType, id, name string, placeholder, value *string, size BsInputSize, readonly, plaintext, checked bool)
+	placeholder := "text"
+	value := "asfasdfsadf"
+	html, err := Input(BsInputTypeCheckbox, "identifier", "email", &placeholder, &value, BsInputSizeSmall, false, false, true).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<div class=\"form-check\"><input checked=\"checked\" class=\"form-check-input  form-control-sm\" id=\"identifier\" name=\"email\" type=\"checkbox\" value=\"asfasdfsadf\"></input><label class=\"form-check-label\" for=\"identifier\">text</label></div>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}

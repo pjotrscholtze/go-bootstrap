@@ -43,16 +43,20 @@ func InputGroupText(content []htmlwrapper.Elm, id string) htmlwrapper.Elm {
 	}
 }
 
-func Input(kind BsInputType, id, name string, placeholder, value *string, size BsInputSize, readonly, plaintext, checked bool) htmlwrapper.Elm {
+func Input(kind BsInputType, id, name string, descriptiveText, value *string, size BsInputSize, readonly, plaintext, checked bool) htmlwrapper.Elm {
 	plaintextStr := ""
 	if plaintext {
 		plaintextStr = " form-control-plaintext"
+	}
+	formControlClass := "form-control"
+	if kind == BsInputTypeCheckbox {
+		formControlClass = "form-check-input"
 	}
 	out := &htmlwrapper.HTMLElm{
 		Tag: "input",
 		Attrs: map[string]string{
 			"type":  string(kind),
-			"class": "form-control " + string(size) + plaintextStr,
+			"class": formControlClass + " " + string(size) + plaintextStr,
 			"id":    id,
 			"name":  name,
 		},
@@ -63,11 +67,33 @@ func Input(kind BsInputType, id, name string, placeholder, value *string, size B
 	if readonly {
 		out.Attrs["readonly"] = "readonly"
 	}
-	if placeholder != nil {
-		out.Attrs["placeholder"] = *placeholder
-	}
 	if value != nil {
 		out.Attrs["value"] = *value
+	}
+	if kind == BsInputTypeCheckbox {
+		out = &htmlwrapper.HTMLElm{
+			Tag: "div",
+			Attrs: map[string]string{
+				"class": "form-check",
+			},
+			Contents: []htmlwrapper.Elm{out},
+		}
+		if descriptiveText != nil {
+			out.Contents = append(out.Contents, &htmlwrapper.HTMLElm{
+				Tag: "label",
+				Attrs: map[string]string{
+					"class": "form-check-label",
+					"for":   id,
+				},
+				Contents: []htmlwrapper.Elm{
+					&htmlwrapper.TextElm{Content: *descriptiveText},
+				},
+			})
+		}
+	} else {
+		if descriptiveText != nil {
+			out.Attrs["placeholder"] = *descriptiveText
+		}
 	}
 	return out
 }
