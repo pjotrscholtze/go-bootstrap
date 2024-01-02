@@ -120,6 +120,7 @@ type TableBuilder interface {
 	AsElm() htmlwrapper.Elm
 
 	GetTableMapping() TableMapping
+	GetTypeMapperConv() typetohtml.TypeMapperConv
 
 	SetStriped(striped bool) TableBuilder
 	SetHoverable(hoverable bool) TableBuilder
@@ -128,6 +129,10 @@ type TableBuilder interface {
 	SetSize(size bootstrap.BsTableSize) TableBuilder
 	SetFooter(footer *[]htmlwrapper.Elm) TableBuilder
 	SetCaption(caption *bootstrap.TableCaption) TableBuilder
+}
+
+func (tb *tableBuilder[T]) GetTypeMapperConv() typetohtml.TypeMapperConv {
+	return tb.typeMapperConv
 }
 
 func (tb *tableBuilder[T]) GetTableMapping() TableMapping {
