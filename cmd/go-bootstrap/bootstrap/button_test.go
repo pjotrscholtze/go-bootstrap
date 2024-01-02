@@ -4,7 +4,7 @@ import "testing"
 
 func TestButton(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -15,7 +15,7 @@ func TestButton(t *testing.T) {
 
 func TestButtonSecondary(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -48,7 +48,7 @@ func TestButtonSecondarySubmit(t *testing.T) {
 
 func TestButtonContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -59,7 +59,7 @@ func TestButtonContent(t *testing.T) {
 
 func TestButtonSecondaryContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -92,7 +92,7 @@ func TestButtonSecondarySubmitContent(t *testing.T) {
 
 func TestButtonSmall(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -103,7 +103,7 @@ func TestButtonSmall(t *testing.T) {
 
 func TestButtonSecondarySmall(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -136,7 +136,7 @@ func TestButtonSecondarySubmitSmall(t *testing.T) {
 
 func TestButtonContentSmall(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -147,7 +147,7 @@ func TestButtonContentSmall(t *testing.T) {
 
 func TestButtonSecondaryContentSmall(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -180,7 +180,7 @@ func TestButtonSecondarySubmitContentSmall(t *testing.T) {
 
 func TestButtonActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -191,7 +191,7 @@ func TestButtonActive(t *testing.T) {
 
 func TestButtonSecondaryActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -224,7 +224,7 @@ func TestButtonSecondarySubmitActive(t *testing.T) {
 
 func TestButtonContentActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -235,7 +235,7 @@ func TestButtonContentActive(t *testing.T) {
 
 func TestButtonSecondaryContentActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -268,7 +268,7 @@ func TestButtonSecondarySubmitContentActive(t *testing.T) {
 
 func TestButtonSmallActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -279,7 +279,7 @@ func TestButtonSmallActive(t *testing.T) {
 
 func TestButtonSecondarySmallActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -312,7 +312,7 @@ func TestButtonSecondarySubmitSmallActive(t *testing.T) {
 
 func TestButtonContentSmallActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -323,7 +323,7 @@ func TestButtonContentSmallActive(t *testing.T) {
 
 func TestButtonSecondaryContentSmallActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -356,7 +356,7 @@ func TestButtonSecondarySubmitContentSmallActive(t *testing.T) {
 
 func TestButtonTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -367,7 +367,7 @@ func TestButtonTooltip(t *testing.T) {
 
 func TestButtonSecondaryTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -400,7 +400,7 @@ func TestButtonSecondarySubmitTooltip(t *testing.T) {
 
 func TestButtonContentTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -411,7 +411,7 @@ func TestButtonContentTooltip(t *testing.T) {
 
 func TestButtonSecondaryContentTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -444,7 +444,7 @@ func TestButtonSecondarySubmitContentTooltip(t *testing.T) {
 
 func TestButtonSmallTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -455,7 +455,7 @@ func TestButtonSmallTooltip(t *testing.T) {
 
 func TestButtonSecondarySmallTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -488,7 +488,7 @@ func TestButtonSecondarySubmitSmallTooltip(t *testing.T) {
 
 func TestButtonContentSmallTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -499,7 +499,7 @@ func TestButtonContentSmallTooltip(t *testing.T) {
 
 func TestButtonSecondaryContentSmallTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -532,7 +532,7 @@ func TestButtonSecondarySubmitContentSmallTooltip(t *testing.T) {
 
 func TestButtonActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -543,7 +543,7 @@ func TestButtonActiveTooltip(t *testing.T) {
 
 func TestButtonSecondaryActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -576,7 +576,7 @@ func TestButtonSecondarySubmitActiveTooltip(t *testing.T) {
 
 func TestButtonContentActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -587,7 +587,7 @@ func TestButtonContentActiveTooltip(t *testing.T) {
 
 func TestButtonSecondaryContentActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -620,7 +620,7 @@ func TestButtonSecondarySubmitContentActiveTooltip(t *testing.T) {
 
 func TestButtonSmallActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -631,7 +631,7 @@ func TestButtonSmallActiveTooltip(t *testing.T) {
 
 func TestButtonSecondarySmallActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -664,7 +664,7 @@ func TestButtonSecondarySubmitSmallActiveTooltip(t *testing.T) {
 
 func TestButtonContentSmallActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -675,7 +675,7 @@ func TestButtonContentSmallActiveTooltip(t *testing.T) {
 
 func TestButtonSecondaryContentSmallActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -709,7 +709,7 @@ func TestButtonSecondarySubmitContentSmallActiveTooltip(t *testing.T) {
 func TestButtonTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -721,7 +721,7 @@ func TestButtonTooltipContent(t *testing.T) {
 func TestButtonSecondaryTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -757,7 +757,7 @@ func TestButtonSecondarySubmitTooltipContent(t *testing.T) {
 func TestButtonContentTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -769,7 +769,7 @@ func TestButtonContentTooltipContent(t *testing.T) {
 func TestButtonSecondaryContentTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -805,7 +805,7 @@ func TestButtonSecondarySubmitContentTooltipContent(t *testing.T) {
 func TestButtonSmallTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -817,7 +817,7 @@ func TestButtonSmallTooltipContent(t *testing.T) {
 func TestButtonSecondarySmallTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -853,7 +853,7 @@ func TestButtonSecondarySubmitSmallTooltipContent(t *testing.T) {
 func TestButtonContentSmallTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -865,7 +865,7 @@ func TestButtonContentSmallTooltipContent(t *testing.T) {
 func TestButtonSecondaryContentSmallTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -901,7 +901,7 @@ func TestButtonSecondarySubmitContentSmallTooltipContent(t *testing.T) {
 func TestButtonActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -913,7 +913,7 @@ func TestButtonActiveTooltipContent(t *testing.T) {
 func TestButtonSecondaryActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -949,7 +949,7 @@ func TestButtonSecondarySubmitActiveTooltipContent(t *testing.T) {
 func TestButtonContentActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -961,7 +961,7 @@ func TestButtonContentActiveTooltipContent(t *testing.T) {
 func TestButtonSecondaryContentActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -997,7 +997,7 @@ func TestButtonSecondarySubmitContentActiveTooltipContent(t *testing.T) {
 func TestButtonSmallActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1009,7 +1009,7 @@ func TestButtonSmallActiveTooltipContent(t *testing.T) {
 func TestButtonSecondarySmallActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1045,7 +1045,7 @@ func TestButtonSecondarySubmitSmallActiveTooltipContent(t *testing.T) {
 func TestButtonContentSmallActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1057,7 +1057,7 @@ func TestButtonContentSmallActiveTooltipContent(t *testing.T) {
 func TestButtonSecondaryContentSmallActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := Button(BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := Button(BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1504,7 +1504,7 @@ func TestButtonCheckboxCheckboxIdValueSecondarySize(t *testing.T) {
 
 func TestButtonAnchor(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1515,7 +1515,7 @@ func TestButtonAnchor(t *testing.T) {
 
 func TestButtonAnchorSecondary(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1548,7 +1548,7 @@ func TestButtonAnchorSecondarySubmit(t *testing.T) {
 
 func TestButtonAnchorContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1559,7 +1559,7 @@ func TestButtonAnchorContent(t *testing.T) {
 
 func TestButtonAnchorSecondaryContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1592,7 +1592,7 @@ func TestButtonAnchorSecondarySubmitContent(t *testing.T) {
 
 func TestButtonAnchorSmall(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1603,7 +1603,7 @@ func TestButtonAnchorSmall(t *testing.T) {
 
 func TestButtonAnchorSecondarySmall(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1636,7 +1636,7 @@ func TestButtonAnchorSecondarySubmitSmall(t *testing.T) {
 
 func TestButtonAnchorContentSmall(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1647,7 +1647,7 @@ func TestButtonAnchorContentSmall(t *testing.T) {
 
 func TestButtonAnchorSecondaryContentSmall(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateNormal, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1680,7 +1680,7 @@ func TestButtonAnchorSecondarySubmitContentSmall(t *testing.T) {
 
 func TestButtonAnchorActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1691,7 +1691,7 @@ func TestButtonAnchorActive(t *testing.T) {
 
 func TestButtonAnchorSecondaryActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1724,7 +1724,7 @@ func TestButtonAnchorSecondarySubmitActive(t *testing.T) {
 
 func TestButtonAnchorContentActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1735,7 +1735,7 @@ func TestButtonAnchorContentActive(t *testing.T) {
 
 func TestButtonAnchorSecondaryContentActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1768,7 +1768,7 @@ func TestButtonAnchorSecondarySubmitContentActive(t *testing.T) {
 
 func TestButtonAnchorSmallActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1779,7 +1779,7 @@ func TestButtonAnchorSmallActive(t *testing.T) {
 
 func TestButtonAnchorSecondarySmallActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1812,7 +1812,7 @@ func TestButtonAnchorSecondarySubmitSmallActive(t *testing.T) {
 
 func TestButtonAnchorContentSmallActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1823,7 +1823,7 @@ func TestButtonAnchorContentSmallActive(t *testing.T) {
 
 func TestButtonAnchorSecondaryContentSmallActive(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, nil).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateActive, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1856,7 +1856,7 @@ func TestButtonAnchorSecondarySubmitContentSmallActive(t *testing.T) {
 
 func TestButtonAnchorTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1867,7 +1867,7 @@ func TestButtonAnchorTooltip(t *testing.T) {
 
 func TestButtonAnchorSecondaryTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1900,7 +1900,7 @@ func TestButtonAnchorSecondarySubmitTooltip(t *testing.T) {
 
 func TestButtonAnchorContentTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1911,7 +1911,7 @@ func TestButtonAnchorContentTooltip(t *testing.T) {
 
 func TestButtonAnchorSecondaryContentTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1944,7 +1944,7 @@ func TestButtonAnchorSecondarySubmitContentTooltip(t *testing.T) {
 
 func TestButtonAnchorSmallTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1955,7 +1955,7 @@ func TestButtonAnchorSmallTooltip(t *testing.T) {
 
 func TestButtonAnchorSecondarySmallTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1988,7 +1988,7 @@ func TestButtonAnchorSecondarySubmitSmallTooltip(t *testing.T) {
 
 func TestButtonAnchorContentSmallTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -1999,7 +1999,7 @@ func TestButtonAnchorContentSmallTooltip(t *testing.T) {
 
 func TestButtonAnchorSecondaryContentSmallTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2032,7 +2032,7 @@ func TestButtonAnchorSecondarySubmitContentSmallTooltip(t *testing.T) {
 
 func TestButtonAnchorActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2043,7 +2043,7 @@ func TestButtonAnchorActiveTooltip(t *testing.T) {
 
 func TestButtonAnchorSecondaryActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2076,7 +2076,7 @@ func TestButtonAnchorSecondarySubmitActiveTooltip(t *testing.T) {
 
 func TestButtonAnchorContentActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2087,7 +2087,7 @@ func TestButtonAnchorContentActiveTooltip(t *testing.T) {
 
 func TestButtonAnchorSecondaryContentActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2120,7 +2120,7 @@ func TestButtonAnchorSecondarySubmitContentActiveTooltip(t *testing.T) {
 
 func TestButtonAnchorSmallActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2131,7 +2131,7 @@ func TestButtonAnchorSmallActiveTooltip(t *testing.T) {
 
 func TestButtonAnchorSecondarySmallActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2164,7 +2164,7 @@ func TestButtonAnchorSecondarySubmitSmallActiveTooltip(t *testing.T) {
 
 func TestButtonAnchorContentSmallActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2175,7 +2175,7 @@ func TestButtonAnchorContentSmallActiveTooltip(t *testing.T) {
 
 func TestButtonAnchorSecondaryContentSmallActiveTooltip(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title"}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2209,7 +2209,7 @@ func TestButtonAnchorSecondarySubmitContentSmallActiveTooltip(t *testing.T) {
 func TestButtonAnchorTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2221,7 +2221,7 @@ func TestButtonAnchorTooltipContent(t *testing.T) {
 func TestButtonAnchorSecondaryTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2257,7 +2257,7 @@ func TestButtonAnchorSecondarySubmitTooltipContent(t *testing.T) {
 func TestButtonAnchorContentTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2269,7 +2269,7 @@ func TestButtonAnchorContentTooltipContent(t *testing.T) {
 func TestButtonAnchorSecondaryContentTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2305,7 +2305,7 @@ func TestButtonAnchorSecondarySubmitContentTooltipContent(t *testing.T) {
 func TestButtonAnchorSmallTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2317,7 +2317,7 @@ func TestButtonAnchorSmallTooltipContent(t *testing.T) {
 func TestButtonAnchorSecondarySmallTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2353,7 +2353,7 @@ func TestButtonAnchorSecondarySubmitSmallTooltipContent(t *testing.T) {
 func TestButtonAnchorContentSmallTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2365,7 +2365,7 @@ func TestButtonAnchorContentSmallTooltipContent(t *testing.T) {
 func TestButtonAnchorSecondaryContentSmallTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateNormal, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2401,7 +2401,7 @@ func TestButtonAnchorSecondarySubmitContentSmallTooltipContent(t *testing.T) {
 func TestButtonAnchorActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2413,7 +2413,7 @@ func TestButtonAnchorActiveTooltipContent(t *testing.T) {
 func TestButtonAnchorSecondaryActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2449,7 +2449,7 @@ func TestButtonAnchorSecondarySubmitActiveTooltipContent(t *testing.T) {
 func TestButtonAnchorContentActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2461,7 +2461,7 @@ func TestButtonAnchorContentActiveTooltipContent(t *testing.T) {
 func TestButtonAnchorSecondaryContentActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnLg, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2497,7 +2497,7 @@ func TestButtonAnchorSecondarySubmitContentActiveTooltipContent(t *testing.T) {
 func TestButtonAnchorSmallActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2509,7 +2509,7 @@ func TestButtonAnchorSmallActiveTooltipContent(t *testing.T) {
 func TestButtonAnchorSecondarySmallActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2545,7 +2545,7 @@ func TestButtonAnchorSecondarySubmitSmallActiveTooltipContent(t *testing.T) {
 func TestButtonAnchorContentSmallActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnPrimary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -2557,7 +2557,7 @@ func TestButtonAnchorContentSmallActiveTooltipContent(t *testing.T) {
 func TestButtonAnchorSecondaryContentSmallActiveTooltipContent(t *testing.T) {
 	// Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, state BsBtnState, popover *TooltipPopover)
 	content := "content"
-	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
+	html, err := ButtonAnchor("LinkHere", BsBtnSecondary, BsBtnStateNormal, "text2", BsBtnSm, BsBtnStateActive, &TooltipPopover{Title: "title", Content: &content}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}

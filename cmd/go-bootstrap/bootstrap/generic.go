@@ -45,7 +45,7 @@ const (
 type BsBtnSize string
 
 const (
-	BsBtnNormal BsBtnKind = ""
+	BsBtnNormal BsBtnSize = ""
 	BsBtnLg               = "btn-lg"
 	BsBtnSm               = "btn-sm"
 )

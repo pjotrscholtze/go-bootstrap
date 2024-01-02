@@ -12,7 +12,7 @@ import "testing"
 func TestDrowndown(t *testing.T) {
 	// Drowndown(direction BsDropdownDirection, btnType BsBtnStyle, btnKind BsBtnKind, btnText string, btnSize BsBtnSize, btnState BsBtnState, items []DrowndownItem)
 	html, err := Drowndown(BsDropdownDirectionDownDown, BsBtnPrimary,
-		BsBtnNormal, "text", BsBtnStateNormal, BsBtnStateDisabled,
+		BsBtnStateNormal, "text", BsBtnStateNormal, BsBtnStateDisabled,
 		[]DrowndownItem{}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
@@ -25,7 +25,7 @@ func TestDrowndown(t *testing.T) {
 func TestDrowndownDirectionUp(t *testing.T) {
 	// Drowndown(direction BsDropdownDirection, btnType BsBtnStyle, btnKind BsBtnKind, btnText string, btnSize BsBtnSize, btnState BsBtnState, items []DrowndownItem)
 	html, err := Drowndown(BsDropdownDirectionDownUp, BsBtnPrimary,
-		BsBtnNormal, "text", BsBtnStateNormal, BsBtnStateDisabled,
+		BsBtnStateNormal, "text", BsBtnStateNormal, BsBtnStateDisabled,
 		[]DrowndownItem{}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
@@ -38,7 +38,7 @@ func TestDrowndownDirectionUp(t *testing.T) {
 func TestDrowndownDirectionUpSecondary(t *testing.T) {
 	// Drowndown(direction BsDropdownDirection, btnType BsBtnStyle, btnKind BsBtnKind, btnText string, btnSize BsBtnSize, btnState BsBtnState, items []DrowndownItem)
 	html, err := Drowndown(BsDropdownDirectionDownUp, BsBtnSecondary,
-		BsBtnNormal, "text", BsBtnStateNormal, BsBtnStateDisabled,
+		BsBtnStateNormal, "text", BsBtnStateNormal, BsBtnStateDisabled,
 		[]DrowndownItem{}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)

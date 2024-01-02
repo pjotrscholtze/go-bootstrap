@@ -115,8 +115,8 @@ func TestNavBarContentDiffBackgroundStickyTopCollapseButton(t *testing.T) {
 	// NavBar(id string, color BsColor, location BsLocation, collapsable *CollapseButton, content htmlwrapper.Elm)
 	html, err := NavBar("id", BsColorSecondary, BsLocationStickyTop, &CollapseButton{
 		BtnType: BsBtnPrimary,
-		Kind:    BsBtnNormal,
-		Size:    btnGroupSm,
+		Kind:    BsBtnStateNormal,
+		Size:    BtnGroupSizeSm,
 		State:   BsBtnStateDisabled,
 		Popover: nil,
 	}, &htmlwrapper.TextElm{Content: "text"}).AsHTML()
