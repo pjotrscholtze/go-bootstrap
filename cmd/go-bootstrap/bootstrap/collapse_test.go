@@ -8,7 +8,7 @@ import (
 
 func TestCollapse(t *testing.T) {
 	// Collapse(btn *htmlwrapper.HTMLElm, id, target string)
-	html, err := Collapse(Button(BsBtnPrimary, BsBtnKindButton, "text", BsBtnLg, BsBtnStateDisabled, nil).(*htmlwrapper.HTMLElm), "id", "target").AsHTML()
+	html, err := Collapse(Button(BsBtnStylePrimary, BsBtnKindButton, "text", BsBtnLg, BsBtnStateDisabled, nil).(*htmlwrapper.HTMLElm), "id", "target").AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -19,7 +19,7 @@ func TestCollapse(t *testing.T) {
 
 func TestCollapseIdAndTarget(t *testing.T) {
 	// Collapse(btn *htmlwrapper.HTMLElm, id, target string)
-	html, err := Collapse(Button(BsBtnPrimary, BsBtnKindButton, "text", BsBtnLg, BsBtnStateDisabled, nil).(*htmlwrapper.HTMLElm), "fdsa", "asdf").AsHTML()
+	html, err := Collapse(Button(BsBtnStylePrimary, BsBtnKindButton, "text", BsBtnLg, BsBtnStateDisabled, nil).(*htmlwrapper.HTMLElm), "fdsa", "asdf").AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}

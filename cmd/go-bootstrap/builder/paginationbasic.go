@@ -108,7 +108,7 @@ func (pbb *paginationBasicBuilder) AsElm() htmlwrapper.Elm {
 		Contents: []htmlwrapper.Elm{
 			bootstrap.Drowndown(
 				bootstrap.BsDropdownDirectionDownDown,
-				bootstrap.BsBtnOutlinePrimary,
+				bootstrap.BsBtnStyleOutlinePrimary,
 				bootstrap.BsBtnKindSubmit,
 				pbb.resultsPerPagePrependLabel+strconv.FormatInt(int64(pbb.currentResultsPerPage), 10),
 				bootstrap.BsBtnSize(""),

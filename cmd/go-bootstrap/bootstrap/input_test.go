@@ -170,3 +170,179 @@ func TestInputContentCheckedCheckbox(t *testing.T) {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
+
+func TestInputButton(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnType(BsInputBtnTypeButton), "value", BsInputSizeNormal, BsBtnStylePrimary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  btn-primary\" type=\"button\" value=\"value\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButtonSubmit(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnTypeSubmit, "value", BsInputSizeNormal, BsBtnStylePrimary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  btn-primary\" type=\"submit\" value=\"value\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButton2(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnType(BsInputBtnTypeButton), "value2", BsInputSizeNormal, BsBtnStylePrimary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  btn-primary\" type=\"button\" value=\"value2\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButtonSubmit2(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnTypeSubmit, "value", BsInputSizeNormal, BsBtnStylePrimary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  btn-primary\" type=\"submit\" value=\"value\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButtonLarge(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnType(BsInputBtnTypeButton), "value", BsInputSizeLarge, BsBtnStylePrimary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  form-control-lg btn-primary\" type=\"button\" value=\"value\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButtonSubmitLarge(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnTypeSubmit, "value", BsInputSizeLarge, BsBtnStylePrimary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  form-control-lg btn-primary\" type=\"submit\" value=\"value\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButton2Large(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnType(BsInputBtnTypeButton), "value2", BsInputSizeLarge, BsBtnStylePrimary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  form-control-lg btn-primary\" type=\"button\" value=\"value2\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButtonSubmit2Large(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnTypeSubmit, "value", BsInputSizeLarge, BsBtnStylePrimary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  form-control-lg btn-primary\" type=\"submit\" value=\"value\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButtonSecondary(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnType(BsInputBtnTypeButton), "value", BsInputSizeNormal, BsBtnStyleSecondary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  btn-secondary\" type=\"button\" value=\"value\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButtonSubmitSecondary(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnTypeSubmit, "value", BsInputSizeNormal, BsBtnStyleSecondary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  btn-secondary\" type=\"submit\" value=\"value\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButton2Secondary(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnType(BsInputBtnTypeButton), "value2", BsInputSizeNormal, BsBtnStyleSecondary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  btn-secondary\" type=\"button\" value=\"value2\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButtonSubmit2Secondary(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnTypeSubmit, "value", BsInputSizeNormal, BsBtnStyleSecondary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  btn-secondary\" type=\"submit\" value=\"value\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButtonLargeSecondary(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnType(BsInputBtnTypeButton), "value", BsInputSizeLarge, BsBtnStyleSecondary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  form-control-lg btn-secondary\" type=\"button\" value=\"value\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButtonSubmitLargeSecondary(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnTypeSubmit, "value", BsInputSizeLarge, BsBtnStyleSecondary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  form-control-lg btn-secondary\" type=\"submit\" value=\"value\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButton2LargeSecondary(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnType(BsInputBtnTypeButton), "value2", BsInputSizeLarge, BsBtnStyleSecondary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  form-control-lg btn-secondary\" type=\"button\" value=\"value2\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
+
+func TestInputButtonSubmit2LargeSecondary(t *testing.T) {
+	// InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle)
+	html, err := InputButton(BsInputBtnTypeSubmit, "value", BsInputSizeLarge, BsBtnStyleSecondary).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<input class=\"btn  form-control-lg btn-secondary\" type=\"submit\" value=\"value\"></input>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}

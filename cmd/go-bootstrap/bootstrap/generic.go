@@ -22,24 +22,24 @@ const (
 type BsBtnStyle string
 
 const (
-	BsBtnPrimary   BsBtnStyle = "btn-primary"
-	BsBtnSecondary            = "btn-secondary"
-	BsBtnSuccess              = "btn-success"
-	BsBtnDanger               = "btn-danger"
-	BsBtnWarning              = "btn-warning"
-	BsBtnInfo                 = "btn-info"
-	BsBtnLight                = "btn-light"
-	BsBtnDark                 = "btn-dark"
-	BsBtnLink                 = "btn-link"
+	BsBtnStylePrimary   BsBtnStyle = "btn-primary"
+	BsBtnStyleSecondary            = "btn-secondary"
+	BsBtnStyleSuccess              = "btn-success"
+	BsBtnStyleDanger               = "btn-danger"
+	BsBtnStyleWarning              = "btn-warning"
+	BsBtnStyleInfo                 = "btn-info"
+	BsBtnStyleLight                = "btn-light"
+	BsBtnStyleDark                 = "btn-dark"
+	BsBtnStyleLink                 = "btn-link"
 
-	BsBtnOutlinePrimary   = "btn-outline-primary"
-	BsBtnOutlineSecondary = "btn-outline-secondary"
-	BsBtnOutlineSuccess   = "btn-outline-success"
-	BsBtnOutlineDanger    = "btn-outline-danger"
-	BsBtnOutlineWarning   = "btn-outline-warning"
-	BsBtnOutlineInfo      = "btn-outline-info"
-	BsBtnOutlineLight     = "btn-outline-light"
-	BsBtnOutlineDark      = "btn-outline-dark"
+	BsBtnStyleOutlinePrimary   = "btn-outline-primary"
+	BsBtnStyleOutlineSecondary = "btn-outline-secondary"
+	BsBtnStyleOutlineSuccess   = "btn-outline-success"
+	BsBtnStyleOutlineDanger    = "btn-outline-danger"
+	BsBtnStyleOutlineWarning   = "btn-outline-warning"
+	BsBtnStyleOutlineInfo      = "btn-outline-info"
+	BsBtnStyleOutlineLight     = "btn-outline-light"
+	BsBtnStyleOutlineDark      = "btn-outline-dark"
 )
 
 type BsBtnSize string
@@ -150,6 +150,14 @@ const (
 	BsInputTypeTime                 = "time"
 	BsInputTypeUrl                  = "url"
 	BsInputTypeWeek                 = "week"
+)
+
+type BsInputBtnType string
+
+const (
+	BsInputBtnTypeButton BsInputType = "button"
+	BsInputBtnTypeReset              = "reset"
+	BsInputBtnTypeSubmit             = "submit"
 )
 
 type BsInputSize string

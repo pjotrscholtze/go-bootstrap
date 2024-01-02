@@ -162,7 +162,7 @@ func TestModalContent(t *testing.T) {
 
 func TestModelWithButton(t *testing.T) {
 	// ModelWithButton(modelSize ModelSize, fade bool, id string, modalDialogCentered bool, btnType BsBtnStyle, btnKind BsBtnKind, btnText string, btnSize BsBtnSize, btnState BsBtnState, modalContent []htmlwrapper.Elm)
-	html, err := ModelWithButton(ModelSizeNormal, false, "idString", false, BsBtnPrimary, BsBtnKindSubmit, "text", BsBtnSm, BsBtnStateNormal, []htmlwrapper.Elm{}).AsHTML()
+	html, err := ModelWithButton(ModelSizeNormal, false, "idString", false, BsBtnStylePrimary, BsBtnKindSubmit, "text", BsBtnSm, BsBtnStateNormal, []htmlwrapper.Elm{}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}

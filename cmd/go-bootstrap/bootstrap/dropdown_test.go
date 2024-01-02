@@ -11,7 +11,7 @@ import "testing"
 
 func TestDrowndown(t *testing.T) {
 	// Drowndown(direction BsDropdownDirection, btnType BsBtnStyle, btnKind BsBtnKind, btnText string, btnSize BsBtnSize, btnState BsBtnState, items []DrowndownItem)
-	html, err := Drowndown(BsDropdownDirectionDownDown, BsBtnPrimary,
+	html, err := Drowndown(BsDropdownDirectionDownDown, BsBtnStylePrimary,
 		BsBtnStateNormal, "text", BsBtnStateNormal, BsBtnStateDisabled,
 		[]DrowndownItem{}).AsHTML()
 	if err != nil {
@@ -24,7 +24,7 @@ func TestDrowndown(t *testing.T) {
 
 func TestDrowndownDirectionUp(t *testing.T) {
 	// Drowndown(direction BsDropdownDirection, btnType BsBtnStyle, btnKind BsBtnKind, btnText string, btnSize BsBtnSize, btnState BsBtnState, items []DrowndownItem)
-	html, err := Drowndown(BsDropdownDirectionDownUp, BsBtnPrimary,
+	html, err := Drowndown(BsDropdownDirectionDownUp, BsBtnStylePrimary,
 		BsBtnStateNormal, "text", BsBtnStateNormal, BsBtnStateDisabled,
 		[]DrowndownItem{}).AsHTML()
 	if err != nil {
@@ -37,7 +37,7 @@ func TestDrowndownDirectionUp(t *testing.T) {
 
 func TestDrowndownDirectionUpSecondary(t *testing.T) {
 	// Drowndown(direction BsDropdownDirection, btnType BsBtnStyle, btnKind BsBtnKind, btnText string, btnSize BsBtnSize, btnState BsBtnState, items []DrowndownItem)
-	html, err := Drowndown(BsDropdownDirectionDownUp, BsBtnSecondary,
+	html, err := Drowndown(BsDropdownDirectionDownUp, BsBtnStyleSecondary,
 		BsBtnStateNormal, "text", BsBtnStateNormal, BsBtnStateDisabled,
 		[]DrowndownItem{}).AsHTML()
 	if err != nil {
@@ -50,7 +50,7 @@ func TestDrowndownDirectionUpSecondary(t *testing.T) {
 
 func TestDrowndownDirectionUpSecondaryBtnLg(t *testing.T) {
 	// Drowndown(direction BsDropdownDirection, btnType BsBtnStyle, btnKind BsBtnKind, btnText string, btnSize BsBtnSize, btnState BsBtnState, items []DrowndownItem)
-	html, err := Drowndown(BsDropdownDirectionDownUp, BsBtnSecondary,
+	html, err := Drowndown(BsDropdownDirectionDownUp, BsBtnStyleSecondary,
 		BsBtnLg, "text", BsBtnStateNormal, BsBtnStateDisabled,
 		[]DrowndownItem{}).AsHTML()
 	if err != nil {
@@ -63,7 +63,7 @@ func TestDrowndownDirectionUpSecondaryBtnLg(t *testing.T) {
 
 func TestDrowndownDirectionUpSecondaryBtnLgText(t *testing.T) {
 	// Drowndown(direction BsDropdownDirection, btnType BsBtnStyle, btnKind BsBtnKind, btnText string, btnSize BsBtnSize, btnState BsBtnState, items []DrowndownItem)
-	html, err := Drowndown(BsDropdownDirectionDownUp, BsBtnSecondary,
+	html, err := Drowndown(BsDropdownDirectionDownUp, BsBtnStyleSecondary,
 		BsBtnLg, "click me", BsBtnStateNormal, BsBtnStateDisabled,
 		[]DrowndownItem{}).AsHTML()
 	if err != nil {
@@ -76,7 +76,7 @@ func TestDrowndownDirectionUpSecondaryBtnLgText(t *testing.T) {
 
 func TestDrowndownDirectionUpSecondaryBtnLgTextActive(t *testing.T) {
 	// Drowndown(direction BsDropdownDirection, btnType BsBtnStyle, btnKind BsBtnKind, btnText string, btnSize BsBtnSize, btnState BsBtnState, items []DrowndownItem)
-	html, err := Drowndown(BsDropdownDirectionDownUp, BsBtnSecondary,
+	html, err := Drowndown(BsDropdownDirectionDownUp, BsBtnStyleSecondary,
 		BsBtnLg, "click me", BsBtnStateActive, BsBtnStateDisabled,
 		[]DrowndownItem{}).AsHTML()
 	if err != nil {
@@ -89,7 +89,7 @@ func TestDrowndownDirectionUpSecondaryBtnLgTextActive(t *testing.T) {
 
 func TestDrowndownDirectionUpSecondaryBtnLgTextActiveActive(t *testing.T) {
 	// Drowndown(direction BsDropdownDirection, btnType BsBtnStyle, btnKind BsBtnKind, btnText string, btnSize BsBtnSize, btnState BsBtnState, items []DrowndownItem)
-	html, err := Drowndown(BsDropdownDirectionDownUp, BsBtnSecondary,
+	html, err := Drowndown(BsDropdownDirectionDownUp, BsBtnStyleSecondary,
 		BsBtnLg, "click me", BsBtnStateActive, BsBtnStateActive,
 		[]DrowndownItem{}).AsHTML()
 	if err != nil {

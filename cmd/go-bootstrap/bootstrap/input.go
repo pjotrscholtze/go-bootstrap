@@ -97,3 +97,14 @@ func Input(kind BsInputType, id, name string, descriptiveText, value *string, si
 	}
 	return out
 }
+
+func InputButton(kind BsInputBtnType, value string, size BsInputSize, btnStyle BsBtnStyle) htmlwrapper.Elm {
+	return &htmlwrapper.HTMLElm{
+		Tag: "input",
+		Attrs: map[string]string{
+			"type":  string(kind),
+			"class": "btn " + string(size) + " " + string(btnStyle),
+			"value": value,
+		},
+	}
+}
