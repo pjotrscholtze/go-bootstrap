@@ -69,9 +69,9 @@ const (
 type BsBtnGroupSize string
 
 const (
-	btnGroupNormal BsBtnGroupSize = ""
-	btnGroupLg                    = "btn-group-lg"
-	btnGroupSm                    = "btn-group-sm"
+	BtnGroupNormal BsBtnGroupSize = ""
+	BtnGroupLg                    = "btn-group-lg"
+	BtnGroupSm                    = "btn-group-sm"
 )
 
 const (
