@@ -202,12 +202,22 @@ func (tb *tableBuilder[T]) getRowContent(ref T) ([]htmlwrapper.Elm, error) {
 				[]htmlwrapper.Elm{elm},
 			))
 		} else {
+			var innerContent htmlwrapper.Elm
+			innerContent = &htmlwrapper.TextElm{Content: ""}
+			if tb.typeMapperConv.HasCustomMapping(entry.FieldName) {
+				innerContentNew, err := tb.typeMapperConv.CustomMapToHTML(entry.FieldName, ref)
+				if err != nil {
+					return nil, err
+				}
+				innerContent = innerContentNew
+			}
+
 			content = append(content, bootstrap.TableCell(
 				false,
 				bootstrap.BsTableCellKindNormal,
 				1,
 				bootstrap.BsTableColorDefault,
-				[]htmlwrapper.Elm{&htmlwrapper.TextElm{Content: ""}},
+				[]htmlwrapper.Elm{innerContent},
 			))
 		}
 

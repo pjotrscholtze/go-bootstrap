@@ -9,12 +9,25 @@ import (
 )
 
 type typeMapperConv struct {
-	mappings map[string]func(structField reflect.StructField, value reflect.Value, refStruct interface{}) htmlwrapper.Elm
+	mappings       map[string]func(structField reflect.StructField, value reflect.Value, refStruct interface{}) htmlwrapper.Elm
+	customMappings map[string]func(fieldName string, refStruct interface{}) htmlwrapper.Elm
 }
 
 func (tmc *typeMapperConv) HasMapping(kind string) bool {
 	_, ok := tmc.mappings[kind]
 	return ok
+}
+func (tmc *typeMapperConv) HasCustomMapping(fieldName string) bool {
+	_, ok := tmc.customMappings[fieldName]
+	return ok
+}
+func (tmc *typeMapperConv) CustomMapToHTML(fieldName string, refStruct interface{}) (htmlwrapper.Elm, error) {
+	if !tmc.HasCustomMapping(fieldName) {
+		return nil, fmt.Errorf("Unkown field value given! No mapping avaiable!")
+	}
+
+	html := tmc.customMappings[fieldName](fieldName, refStruct)
+	return html, nil
 }
 
 // (kind string, fieldValue reflect.Value) (htmlwrapper.Elm, error)
@@ -29,13 +42,29 @@ func (tmc *typeMapperConv) MapToHTML(structField reflect.StructField, value refl
 
 type TypeMapperConv interface {
 	KnownTypes() []string
+	KnownCustomFields() []string
 	HasMapping(kind string) bool
+	HasCustomMapping(fieldName string) bool
 	// MapToHTML(kind string, fieldValue reflect.Value) (htmlwrapper.Elm, error)
 	MapToHTML(structField reflect.StructField, value reflect.Value, refStruct interface{}) (htmlwrapper.Elm, error)
+	CustomMapToHTML(fieldName string, refStruct interface{}) (htmlwrapper.Elm, error)
 	RegisterMapping(forKind string, fn func(structField reflect.StructField, value reflect.Value, refStruct interface{}) htmlwrapper.Elm)
+	RegisterCustomFieldMapping(fieldName string, fn func(fieldName string, refStruct interface{}) htmlwrapper.Elm)
 	GetMapping(kind string) (func(structField reflect.StructField, value reflect.Value, refStruct interface{}) htmlwrapper.Elm, error)
+	GetCustomMapping(fieldName string) (func(fieldName string, refStruct interface{}) htmlwrapper.Elm, error)
 }
 
+func (tmc *typeMapperConv) RegisterCustomFieldMapping(fieldName string, fn func(fieldName string, refStruct interface{}) htmlwrapper.Elm) {
+	tmc.customMappings[fieldName] = fn
+}
+
+func (tmc *typeMapperConv) KnownCustomFields() []string {
+	out := []string{}
+	for key := range tmc.customMappings {
+		out = append(out, key)
+	}
+	return out
+}
 func (tmc *typeMapperConv) KnownTypes() []string {
 	out := []string{}
 	for key := range tmc.mappings {
@@ -51,6 +80,14 @@ func (tmc *typeMapperConv) GetMapping(kind string) (func(structField reflect.Str
 	}
 	return val, nil
 }
+func (tmc *typeMapperConv) GetCustomMapping(fieldName string) (func(fieldName string, refStruct interface{}) htmlwrapper.Elm, error) {
+	val, ok := tmc.customMappings[fieldName]
+	if !ok {
+		return nil, fmt.Errorf("Failed to find type mapping!")
+	}
+	return val, nil
+}
+
 func (tmc *typeMapperConv) RegisterMapping(forKind string, fn func(structField reflect.StructField, value reflect.Value, refStruct interface{}) htmlwrapper.Elm) {
 	tmc.mappings[forKind] = fn
 }
@@ -60,7 +97,10 @@ func NewTypeMapperConv() TypeMapperConv {
 	// html := tmc.mappings[structField.Type.String()](structField reflect.StructField, value reflect.Value)
 	// html := tmc.mappings[structField.Type.String()](value.FieldByName(structField.Name))
 
-	out := &typeMapperConv{mappings: make(map[string]func(structField reflect.StructField, value reflect.Value, refStruct interface{}) htmlwrapper.Elm)}
+	out := &typeMapperConv{
+		mappings:       make(map[string]func(structField reflect.StructField, value reflect.Value, refStruct interface{}) htmlwrapper.Elm),
+		customMappings: make(map[string]func(fieldName string, refStruct interface{}) htmlwrapper.Elm),
+	}
 	out.mappings["int64"] = func(structField reflect.StructField, value reflect.Value, refStruct interface{}) htmlwrapper.Elm {
 		return &htmlwrapper.TextElm{Content: strconv.FormatInt(value.Int(), 10)}
 	}
