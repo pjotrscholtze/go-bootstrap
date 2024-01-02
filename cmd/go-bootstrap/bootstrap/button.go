@@ -6,6 +6,7 @@ func Button(btnType BsBtnStyle, kind BsBtnKind, text string, size BsBtnSize, sta
 	attrs := map[string]string{
 		"class": "btn " + string(btnType) + " " + string(size),
 		"value": text,
+		"type":  string(kind),
 	}
 	if state == BsBtnStateDisabled {
 		attrs["disabled"] = "disabled"

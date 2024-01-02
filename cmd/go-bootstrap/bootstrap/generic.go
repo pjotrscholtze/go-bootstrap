@@ -53,9 +53,9 @@ const (
 type BsBtnKind string
 
 const (
-	BsBtnSubmit BsBtnKind = "submit"
-	BsBtnButton           = "button"
-	BsBtnReset            = "reset"
+	BsBtnKindSubmit BsBtnKind = "submit"
+	BsBtnKindButton           = "button"
+	BsBtnKindReset            = "reset"
 )
 
 type BsBtnState string

@@ -162,11 +162,11 @@ func TestModalContent(t *testing.T) {
 
 func TestModelWithButton(t *testing.T) {
 	// ModelWithButton(modelSize ModelSize, fade bool, id string, modalDialogCentered bool, btnType BsBtnStyle, btnKind BsBtnKind, btnText string, btnSize BsBtnSize, btnState BsBtnState, modalContent []htmlwrapper.Elm)
-	html, err := ModelWithButton(ModelSizeNormal, false, "idString", false, BsBtnPrimary, BsBtnSubmit, "text", BsBtnSm, BsBtnStateNormal, []htmlwrapper.Elm{}).AsHTML()
+	html, err := ModelWithButton(ModelSizeNormal, false, "idString", false, BsBtnPrimary, BsBtnKindSubmit, "text", BsBtnSm, BsBtnStateNormal, []htmlwrapper.Elm{}).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<div aria-hidden=\"true\" class=\"modal\" id=\"idString\" role=\"dialog\" tabindex=\"-1\"><div class=\"modal-dialog\" role=\"document\"><div class=\"modal-content\"></div></div></div><input class=\"btn btn-primary btn-sm\" data-target=\"#idString\" data-toggle=\"modal\" value=\"text\"></input>" {
+	if html != "<div aria-hidden=\"true\" class=\"modal\" id=\"idString\" role=\"dialog\" tabindex=\"-1\"><div class=\"modal-dialog\" role=\"document\"><div class=\"modal-content\"></div></div></div><input class=\"btn btn-primary btn-sm\" data-target=\"#idString\" data-toggle=\"modal\" type=\"submit\" value=\"text\"></input>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }

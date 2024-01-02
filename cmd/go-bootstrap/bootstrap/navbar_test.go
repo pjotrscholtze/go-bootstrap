@@ -115,7 +115,7 @@ func TestNavBarContentDiffBackgroundStickyTopCollapseButton(t *testing.T) {
 	// NavBar(id string, color BsColor, location BsLocation, collapsable *CollapseButton, content htmlwrapper.Elm)
 	html, err := NavBar("id", BsColorSecondary, BsLocationStickyTop, &CollapseButton{
 		BtnType: BsBtnPrimary,
-		Kind:    BsBtnStateNormal,
+		Kind:    BsBtnKindButton,
 		Size:    BtnGroupSizeSm,
 		State:   BsBtnStateDisabled,
 		Popover: nil,
@@ -123,7 +123,7 @@ func TestNavBarContentDiffBackgroundStickyTopCollapseButton(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"navbar navbar-expand-lg navbar-secondary bg-secondary\"><div class=\"container-fluid\"><input aria-controls=\"id\" aria-disabled=\"true\" aria-expanded=\"false\" class=\"btn btn-primary btn-group-sm\" data-target=\"#id\" data-toggle=\"collapse\" disabled=\"disabled\" value=\"\"><span class=\"navbar-toggler-icon\"></span></input><div class=\"collapse navbar-collapse\" id=\"id\">text</div></div></nav>" {
+	if html != "<nav class=\"navbar navbar-expand-lg navbar-secondary bg-secondary\"><div class=\"container-fluid\"><input aria-controls=\"id\" aria-disabled=\"true\" aria-expanded=\"false\" class=\"btn btn-primary btn-group-sm\" data-target=\"#id\" data-toggle=\"collapse\" disabled=\"disabled\" type=\"button\" value=\"\"><span class=\"navbar-toggler-icon\"></span></input><div class=\"collapse navbar-collapse\" id=\"id\">text</div></div></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 
