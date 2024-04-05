@@ -315,7 +315,7 @@ func TestNavLinkDropdown(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\"></a><div class=\"dropdown-menu\"></div>" {
+	if html != "<a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link dropdown-toggle\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\"></a><div class=\"dropdown-menu\"></div>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -326,7 +326,7 @@ func TestNavLinkDropdownContent(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\">Text</a><div class=\"dropdown-menu\">hoi</div>" {
+	if html != "<a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link dropdown-toggle\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\">Text</a><div class=\"dropdown-menu\">hoi</div>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -348,7 +348,7 @@ func TestNavLinkDropdownContentActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link active dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\">Text</a><div class=\"dropdown-menu\">hoi</div>" {
+	if html != "<a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link active dropdown-toggle\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\">Text</a><div class=\"dropdown-menu\">hoi</div>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -359,7 +359,7 @@ func TestNavLinkDropdownActive(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link active dropdown-toggle\" data-toggle=\"dropdown\" href=\"#\" role=\"button\"></a><div class=\"dropdown-menu\">asdf</div>" {
+	if html != "<a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link active dropdown-toggle\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\"></a><div class=\"dropdown-menu\">asdf</div>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -394,7 +394,7 @@ func TestNavLinkActiveHrefDropdown(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link active dropdown-toggle\" data-toggle=\"dropdown\" href=\"test\" role=\"button\"></a><div class=\"dropdown-menu\">asdf</div>" {
+	if html != "<a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link active dropdown-toggle\" data-bs-toggle=\"dropdown\" href=\"test\" role=\"button\"></a><div class=\"dropdown-menu\">asdf</div>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }

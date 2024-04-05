@@ -77,7 +77,7 @@ func NavLink(isDropdownToggle bool, navState BsNavState, content htmlwrapper.Elm
 	}
 	if isDropdownToggle {
 		attrs["class"] += " dropdown-toggle"
-		attrs["data-toggle"] = "dropdown"
+		attrs["data-bs-toggle"] = "dropdown"
 		attrs["role"] = "button"
 		attrs["aria-haspopup"] = "true"
 		attrs["aria-expanded"] = "false"
