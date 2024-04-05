@@ -176,3 +176,23 @@ func TestHTMLElmAsHTMLSimpleElementAttrEscaped5(t *testing.T) {
 		t.Fatalf(`AsHTML() on HTML element, expected "<a&#34; href=\"#&#34;\"></a&#34;>", got "%q"`, html)
 	}
 }
+
+func TestTextContent(t *testing.T) {
+	html, err := htmlwrapper.Text("asdf").AsHTML()
+	if err != nil {
+		t.Fatalf(`AsHTML() on HTML element, should not crash, %v`, err)
+	}
+	if html != "asdf" {
+		t.Fatalf(`AsHTML() on HTML element, expected "asdf", got "%q"`, html)
+	}
+}
+
+func TestTextContent2(t *testing.T) {
+	html, err := htmlwrapper.Text("lorem ipsum").AsHTML()
+	if err != nil {
+		t.Fatalf(`AsHTML() on HTML element, should not crash, %v`, err)
+	}
+	if html != "lorem ipsum" {
+		t.Fatalf(`AsHTML() on HTML element, expected "lorem ipsum", got "%q"`, html)
+	}
+}

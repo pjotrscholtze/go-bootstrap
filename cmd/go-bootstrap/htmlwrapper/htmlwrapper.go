@@ -118,3 +118,7 @@ func (he *HTMLElm) AsHTML() (string, error) {
 	})
 	return tpl.String(), err
 }
+
+func Text(inpt string) Elm {
+	return &TextElm{Content: inpt}
+}
