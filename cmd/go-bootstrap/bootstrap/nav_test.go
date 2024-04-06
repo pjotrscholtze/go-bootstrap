@@ -11,7 +11,7 @@ func TestNavContent(t *testing.T) {
 	html, err := Nav(false, false, BsNavJustifyContentLeft, BsNavKindNormal, []*NavItem{{
 		Content:       &htmlwrapper.TextElm{Content: "test"},
 		DropDownItems: &[]*NavItem{},
-	}}).AsHTML()
+	}}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -26,7 +26,7 @@ func TestNavContentHref(t *testing.T) {
 		Content:       &htmlwrapper.TextElm{Content: "test"},
 		DropDownItems: &[]*NavItem{},
 		Href:          &href,
-	}}).AsHTML()
+	}}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -42,7 +42,7 @@ func TestNavContentHrefDisabled(t *testing.T) {
 		DropDownItems: &[]*NavItem{},
 		Href:          &href,
 		NavState:      BsNavStateDisabled,
-	}}).AsHTML()
+	}}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -58,7 +58,7 @@ func TestNavContentHrefActive(t *testing.T) {
 		DropDownItems: &[]*NavItem{},
 		Href:          &href,
 		NavState:      BsNavStateActive,
-	}}).AsHTML()
+	}}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -66,10 +66,27 @@ func TestNavContentHrefActive(t *testing.T) {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
+func TestNavContentHrefActiveColor(t *testing.T) {
+	c := BsColorPrimary
+	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
+	href := "link"
+	html, err := Nav(false, false, BsNavJustifyContentLeft, BsNavKindNormal, []*NavItem{{
+		Content:       &htmlwrapper.TextElm{Content: "test"},
+		DropDownItems: &[]*NavItem{},
+		Href:          &href,
+		NavState:      BsNavStateActive,
+	}}, &c).AsHTML()
+	if err != nil {
+		t.Fatalf("Failed to make HTML! %s", err)
+	}
+	if html != "<nav class=\"navbar-nav   navbar-primary bg-primary\"><a class=\"nav-link active\" href=\"link\">test</a></nav>" {
+		t.Fatalf("HTML is not as expected!")
+	}
+}
 
 func TestNav(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(false, false, BsNavJustifyContentLeft, BsNavKindNormal, []*NavItem{}).AsHTML()
+	html, err := Nav(false, false, BsNavJustifyContentLeft, BsNavKindNormal, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -80,7 +97,7 @@ func TestNav(t *testing.T) {
 
 func TestNavUl(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(true, false, BsNavJustifyContentLeft, BsNavKindNormal, []*NavItem{}).AsHTML()
+	html, err := Nav(true, false, BsNavJustifyContentLeft, BsNavKindNormal, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -91,7 +108,7 @@ func TestNavUl(t *testing.T) {
 
 func TestNavVertical(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(false, true, BsNavJustifyContentLeft, BsNavKindNormal, []*NavItem{}).AsHTML()
+	html, err := Nav(false, true, BsNavJustifyContentLeft, BsNavKindNormal, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -102,7 +119,7 @@ func TestNavVertical(t *testing.T) {
 
 func TestNavJustifyCenter(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(false, false, BsNavJustifyContentCenter, BsNavKindNormal, []*NavItem{}).AsHTML()
+	html, err := Nav(false, false, BsNavJustifyContentCenter, BsNavKindNormal, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -113,7 +130,7 @@ func TestNavJustifyCenter(t *testing.T) {
 
 func TestNavUlJustifyCenter(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(true, false, BsNavJustifyContentCenter, BsNavKindNormal, []*NavItem{}).AsHTML()
+	html, err := Nav(true, false, BsNavJustifyContentCenter, BsNavKindNormal, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -124,7 +141,7 @@ func TestNavUlJustifyCenter(t *testing.T) {
 
 func TestNavVerticalJustifyCenter(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(false, true, BsNavJustifyContentCenter, BsNavKindNormal, []*NavItem{}).AsHTML()
+	html, err := Nav(false, true, BsNavJustifyContentCenter, BsNavKindNormal, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -135,7 +152,7 @@ func TestNavVerticalJustifyCenter(t *testing.T) {
 
 func TestNavUlVerticalJustifyCenter(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(true, true, BsNavJustifyContentCenter, BsNavKindNormal, []*NavItem{}).AsHTML()
+	html, err := Nav(true, true, BsNavJustifyContentCenter, BsNavKindNormal, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -146,7 +163,7 @@ func TestNavUlVerticalJustifyCenter(t *testing.T) {
 
 func TestNavPills(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(false, false, BsNavJustifyContentLeft, BsNavKindPills, []*NavItem{}).AsHTML()
+	html, err := Nav(false, false, BsNavJustifyContentLeft, BsNavKindPills, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -157,7 +174,7 @@ func TestNavPills(t *testing.T) {
 
 func TestNavUlPills(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(true, false, BsNavJustifyContentLeft, BsNavKindPills, []*NavItem{}).AsHTML()
+	html, err := Nav(true, false, BsNavJustifyContentLeft, BsNavKindPills, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -168,7 +185,7 @@ func TestNavUlPills(t *testing.T) {
 
 func TestNavVerticalPills(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(false, true, BsNavJustifyContentLeft, BsNavKindPills, []*NavItem{}).AsHTML()
+	html, err := Nav(false, true, BsNavJustifyContentLeft, BsNavKindPills, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -179,7 +196,7 @@ func TestNavVerticalPills(t *testing.T) {
 
 func TestNavJustifyCenterPills(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(false, false, BsNavJustifyContentCenter, BsNavKindPills, []*NavItem{}).AsHTML()
+	html, err := Nav(false, false, BsNavJustifyContentCenter, BsNavKindPills, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -190,7 +207,7 @@ func TestNavJustifyCenterPills(t *testing.T) {
 
 func TestNavUlJustifyCenterPills(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(true, false, BsNavJustifyContentCenter, BsNavKindPills, []*NavItem{}).AsHTML()
+	html, err := Nav(true, false, BsNavJustifyContentCenter, BsNavKindPills, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -201,7 +218,7 @@ func TestNavUlJustifyCenterPills(t *testing.T) {
 
 func TestNavVerticalJustifyCenterPills(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(false, true, BsNavJustifyContentCenter, BsNavKindPills, []*NavItem{}).AsHTML()
+	html, err := Nav(false, true, BsNavJustifyContentCenter, BsNavKindPills, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -212,7 +229,7 @@ func TestNavVerticalJustifyCenterPills(t *testing.T) {
 
 func TestNavUlVerticalJustifyCenterPills(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(true, true, BsNavJustifyContentCenter, BsNavKindPills, []*NavItem{}).AsHTML()
+	html, err := Nav(true, true, BsNavJustifyContentCenter, BsNavKindPills, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -223,7 +240,7 @@ func TestNavUlVerticalJustifyCenterPills(t *testing.T) {
 
 func TestNavTabs(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(false, false, BsNavJustifyContentLeft, BsNavKindTabs, []*NavItem{}).AsHTML()
+	html, err := Nav(false, false, BsNavJustifyContentLeft, BsNavKindTabs, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -234,7 +251,7 @@ func TestNavTabs(t *testing.T) {
 
 func TestNavUlTabs(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(true, false, BsNavJustifyContentLeft, BsNavKindTabs, []*NavItem{}).AsHTML()
+	html, err := Nav(true, false, BsNavJustifyContentLeft, BsNavKindTabs, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -245,7 +262,7 @@ func TestNavUlTabs(t *testing.T) {
 
 func TestNavVerticalTabs(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(false, true, BsNavJustifyContentLeft, BsNavKindTabs, []*NavItem{}).AsHTML()
+	html, err := Nav(false, true, BsNavJustifyContentLeft, BsNavKindTabs, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -256,7 +273,7 @@ func TestNavVerticalTabs(t *testing.T) {
 
 func TestNavJustifyCenterTabs(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(false, false, BsNavJustifyContentCenter, BsNavKindTabs, []*NavItem{}).AsHTML()
+	html, err := Nav(false, false, BsNavJustifyContentCenter, BsNavKindTabs, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -267,7 +284,7 @@ func TestNavJustifyCenterTabs(t *testing.T) {
 
 func TestNavUlJustifyCenterTabs(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(true, false, BsNavJustifyContentCenter, BsNavKindTabs, []*NavItem{}).AsHTML()
+	html, err := Nav(true, false, BsNavJustifyContentCenter, BsNavKindTabs, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -278,7 +295,7 @@ func TestNavUlJustifyCenterTabs(t *testing.T) {
 
 func TestNavVerticalJustifyCenterTabs(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(false, true, BsNavJustifyContentCenter, BsNavKindTabs, []*NavItem{}).AsHTML()
+	html, err := Nav(false, true, BsNavJustifyContentCenter, BsNavKindTabs, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -289,7 +306,7 @@ func TestNavVerticalJustifyCenterTabs(t *testing.T) {
 
 func TestNavUlVerticalJustifyCenterTabs(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
-	html, err := Nav(true, true, BsNavJustifyContentCenter, BsNavKindTabs, []*NavItem{}).AsHTML()
+	html, err := Nav(true, true, BsNavJustifyContentCenter, BsNavKindTabs, []*NavItem{}, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}

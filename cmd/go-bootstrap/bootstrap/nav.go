@@ -31,9 +31,12 @@ func recursivelyMakeNavLink(ni *NavItem) htmlwrapper.Elm {
 	)
 }
 
-func Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem) htmlwrapper.Elm {
+func Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, color *BsColor) htmlwrapper.Elm {
 	attrs := map[string]string{
 		"class": "navbar-nav " + string(tabKind) + " " + string(justifyContent),
+	}
+	if color != nil {
+		attrs["class"] += " navbar-" + string(*color) + " bg-" + string(*color)
 	}
 	if vertical {
 		attrs["class"] += " flex-column"
