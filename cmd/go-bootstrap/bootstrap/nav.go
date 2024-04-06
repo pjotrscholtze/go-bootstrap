@@ -9,7 +9,7 @@ type NavItem struct {
 	NavState      BsNavState
 }
 
-func recursivelyMakeNavLink(ni *NavItem) htmlwrapper.Elm {
+func recursivelyMakeNavLink(ni *NavItem, color *BsColor) htmlwrapper.Elm {
 	if ni == nil {
 		return &htmlwrapper.HTMLElm{
 			Tag:   "div",
@@ -19,7 +19,7 @@ func recursivelyMakeNavLink(ni *NavItem) htmlwrapper.Elm {
 	content := make([]htmlwrapper.Elm, len(*ni.DropDownItems))
 	if ni.DropDownItems != nil {
 		for i, item := range *ni.DropDownItems {
-			content[i] = recursivelyMakeNavLink(item)
+			content[i] = recursivelyMakeNavLink(item, color)
 		}
 	}
 	return NavLink(
@@ -28,6 +28,7 @@ func recursivelyMakeNavLink(ni *NavItem) htmlwrapper.Elm {
 		ni.Content,
 		&htmlwrapper.MultiElm{Contents: content},
 		ni.Href,
+		color,
 	)
 }
 
@@ -59,18 +60,18 @@ func Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind B
 				Attrs: map[string]string{
 					"class": class,
 				},
-				Contents: []htmlwrapper.Elm{recursivelyMakeNavLink(item)},
+				Contents: []htmlwrapper.Elm{recursivelyMakeNavLink(item, color)},
 			}
 		}
 	} else {
 		for i, item := range content {
-			navContents[i] = recursivelyMakeNavLink(item)
+			navContents[i] = recursivelyMakeNavLink(item, color)
 		}
 	}
 	return out
 }
 
-func NavLink(isDropdownToggle bool, navState BsNavState, content htmlwrapper.Elm, dropdownContent htmlwrapper.Elm, href *string) htmlwrapper.Elm {
+func NavLink(isDropdownToggle bool, navState BsNavState, content htmlwrapper.Elm, dropdownContent htmlwrapper.Elm, href *string, color *BsColor) htmlwrapper.Elm {
 	addClass := ""
 	if navState != BsNavStateNormal {
 		addClass += " " + string(navState)
@@ -89,6 +90,10 @@ func NavLink(isDropdownToggle bool, navState BsNavState, content htmlwrapper.Elm
 		attrs["role"] = "button"
 		attrs["aria-haspopup"] = "true"
 		attrs["aria-expanded"] = "false"
+		colorClass := ""
+		if color != nil {
+			colorClass = "navbar-" + string(*color) + " bg-" + string(*color)
+		}
 		return &htmlwrapper.MultiElm{
 			Contents: []htmlwrapper.Elm{
 				&htmlwrapper.HTMLElm{
@@ -99,7 +104,7 @@ func NavLink(isDropdownToggle bool, navState BsNavState, content htmlwrapper.Elm
 				&htmlwrapper.HTMLElm{
 					Tag: "div",
 					Attrs: map[string]string{
-						"class": "dropdown-menu",
+						"class": "dropdown-menu" + colorClass,
 					},
 					Contents: []htmlwrapper.Elm{dropdownContent},
 				},

@@ -71,15 +71,22 @@ func TestNavContentHrefActiveColor(t *testing.T) {
 	// Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind BsNavKind, content []*NavItem, popover *TooltipPopover)
 	href := "link"
 	html, err := Nav(false, false, BsNavJustifyContentLeft, BsNavKindNormal, []*NavItem{{
-		Content:       &htmlwrapper.TextElm{Content: "test"},
-		DropDownItems: &[]*NavItem{},
-		Href:          &href,
-		NavState:      BsNavStateActive,
+		Content: &htmlwrapper.TextElm{Content: "test"},
+		DropDownItems: &[]*NavItem{
+			{
+				Href:          &href,
+				Content:       htmlwrapper.Text("asd"),
+				DropDownItems: &[]*NavItem{},
+				NavState:      BsNavStateActive,
+			},
+		},
+		Href:     &href,
+		NavState: BsNavStateActive,
 	}}, &c).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"navbar-nav   navbar-primary bg-primary\"><a class=\"nav-link active\" href=\"link\">test</a></nav>" {
+	if html != "<nav class=\"navbar-nav   navbar-primary bg-primary\"><a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link active dropdown-toggle\" data-bs-toggle=\"dropdown\" href=\"link\" role=\"button\">test</a><div class=\"dropdown-menunavbar-primary bg-primary\"><a class=\"nav-link active\" href=\"link\">asd</a></div></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
@@ -317,7 +324,7 @@ func TestNavUlVerticalJustifyCenterTabs(t *testing.T) {
 
 func TestNavLink(t *testing.T) {
 	// NavLink(isDropdownToggle bool, navState *BsNavState, content htmlwrapper.Elm, href *string, popover *TooltipPopover)
-	html, err := NavLink(false, BsNavStateNormal, &htmlwrapper.TextElm{Content: ""}, nil, nil).AsHTML()
+	html, err := NavLink(false, BsNavStateNormal, &htmlwrapper.TextElm{Content: ""}, nil, nil, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -328,7 +335,7 @@ func TestNavLink(t *testing.T) {
 
 func TestNavLinkDropdown(t *testing.T) {
 	// NavLink(isDropdownToggle bool, navState *BsNavState, content htmlwrapper.Elm, href *string, popover *TooltipPopover)
-	html, err := NavLink(true, BsNavStateNormal, &htmlwrapper.TextElm{Content: ""}, &htmlwrapper.TextElm{Content: ""}, nil).AsHTML()
+	html, err := NavLink(true, BsNavStateNormal, &htmlwrapper.TextElm{Content: ""}, &htmlwrapper.TextElm{Content: ""}, nil, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -339,7 +346,7 @@ func TestNavLinkDropdown(t *testing.T) {
 
 func TestNavLinkDropdownContent(t *testing.T) {
 	// NavLink(isDropdownToggle bool, navState *BsNavState, content htmlwrapper.Elm, href *string, popover *TooltipPopover)
-	html, err := NavLink(true, BsNavStateNormal, &htmlwrapper.TextElm{Content: "Text"}, &htmlwrapper.TextElm{Content: "hoi"}, nil).AsHTML()
+	html, err := NavLink(true, BsNavStateNormal, &htmlwrapper.TextElm{Content: "Text"}, &htmlwrapper.TextElm{Content: "hoi"}, nil, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -350,7 +357,7 @@ func TestNavLinkDropdownContent(t *testing.T) {
 
 func TestNavLinkContent(t *testing.T) {
 	// NavLink(isDropdownToggle bool, navState *BsNavState, content htmlwrapper.Elm, href *string, popover *TooltipPopover)
-	html, err := NavLink(false, BsNavStateNormal, &htmlwrapper.TextElm{Content: "Text"}, nil, nil).AsHTML()
+	html, err := NavLink(false, BsNavStateNormal, &htmlwrapper.TextElm{Content: "Text"}, nil, nil, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -361,7 +368,7 @@ func TestNavLinkContent(t *testing.T) {
 
 func TestNavLinkDropdownContentActive(t *testing.T) {
 	// NavLink(isDropdownToggle bool, navState *BsNavState, content htmlwrapper.Elm, href *string, popover *TooltipPopover)
-	html, err := NavLink(true, BsNavStateActive, &htmlwrapper.TextElm{Content: "Text"}, &htmlwrapper.TextElm{Content: "hoi"}, nil).AsHTML()
+	html, err := NavLink(true, BsNavStateActive, &htmlwrapper.TextElm{Content: "Text"}, &htmlwrapper.TextElm{Content: "hoi"}, nil, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -372,7 +379,7 @@ func TestNavLinkDropdownContentActive(t *testing.T) {
 
 func TestNavLinkDropdownActive(t *testing.T) {
 	// NavLink(isDropdownToggle bool, navState *BsNavState, content htmlwrapper.Elm, href *string, popover *TooltipPopover)
-	html, err := NavLink(true, BsNavStateActive, &htmlwrapper.TextElm{Content: ""}, &htmlwrapper.TextElm{Content: "asdf"}, nil).AsHTML()
+	html, err := NavLink(true, BsNavStateActive, &htmlwrapper.TextElm{Content: ""}, &htmlwrapper.TextElm{Content: "asdf"}, nil, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -383,7 +390,7 @@ func TestNavLinkDropdownActive(t *testing.T) {
 
 func TestNavLinkActive(t *testing.T) {
 	// NavLink(isDropdownToggle bool, navState *BsNavState, content htmlwrapper.Elm, href *string, popover *TooltipPopover)
-	html, err := NavLink(false, BsNavStateActive, &htmlwrapper.TextElm{Content: ""}, nil, nil).AsHTML()
+	html, err := NavLink(false, BsNavStateActive, &htmlwrapper.TextElm{Content: ""}, nil, nil, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -395,7 +402,7 @@ func TestNavLinkActive(t *testing.T) {
 func TestNavLinkActiveHref(t *testing.T) {
 	// NavLink(isDropdownToggle bool, navState *BsNavState, content htmlwrapper.Elm, href *string, popover *TooltipPopover)
 	href := "test"
-	html, err := NavLink(false, BsNavStateActive, &htmlwrapper.TextElm{Content: ""}, nil, &href).AsHTML()
+	html, err := NavLink(false, BsNavStateActive, &htmlwrapper.TextElm{Content: ""}, nil, &href, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
@@ -407,7 +414,7 @@ func TestNavLinkActiveHref(t *testing.T) {
 func TestNavLinkActiveHrefDropdown(t *testing.T) {
 	// NavLink(isDropdownToggle bool, navState *BsNavState, content htmlwrapper.Elm, href *string, popover *TooltipPopover)
 	href := "test"
-	html, err := NavLink(true, BsNavStateActive, &htmlwrapper.TextElm{Content: ""}, &htmlwrapper.TextElm{Content: "asdf"}, &href).AsHTML()
+	html, err := NavLink(true, BsNavStateActive, &htmlwrapper.TextElm{Content: ""}, &htmlwrapper.TextElm{Content: "asdf"}, &href, nil).AsHTML()
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}

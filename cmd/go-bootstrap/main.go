@@ -49,22 +49,78 @@ func main() {
 		100,
 	}).SetCurrentResultsPerPage(10)
 	h := "#"
-
-	nv := bootstrap.NavBar("id", bootstrap.BsColorPrimary, bootstrap.BsLocationNormal, nil, bootstrap.Nav(true, true, bootstrap.BsNavJustifyContentLeft, bootstrap.BsNavKindNormal, []*bootstrap.NavItem{
-		&bootstrap.NavItem{
-			Href:     &h,
-			Content:  &htmlwrapper.TextElm{Content: "a"},
-			NavState: bootstrap.BsNavStateNormal,
-			DropDownItems: &[]*bootstrap.NavItem{
-				&bootstrap.NavItem{
-					Href:          &h,
-					Content:       &htmlwrapper.TextElm{"asdfadfs"},
+	c := bootstrap.BsColor(bootstrap.BsColorDark)
+	nv := bootstrap.NavBar("id", c, bootstrap.BsLocationFixedTop, nil, &htmlwrapper.MultiElm{
+		Contents: []htmlwrapper.Elm{
+			bootstrap.Nav(true, false, bootstrap.BsNavJustifyContentLeft, bootstrap.BsNavKindNormal, []*bootstrap.NavItem{
+				{
+					Content:       htmlwrapper.Text("Dashboard"),
 					DropDownItems: &[]*bootstrap.NavItem{},
+					Href:          &h,
 					NavState:      bootstrap.BsNavStateNormal,
 				},
-			},
+				{
+					Content: htmlwrapper.Text("Email"),
+					DropDownItems: &[]*bootstrap.NavItem{
+						{
+							Href:          &h,
+							NavState:      bootstrap.BsNavStateNormal,
+							DropDownItems: &[]*bootstrap.NavItem{},
+							Content:       htmlwrapper.Text("Email"),
+						},
+						{
+							Href:          &h,
+							NavState:      bootstrap.BsNavStateNormal,
+							DropDownItems: &[]*bootstrap.NavItem{},
+							Content:       htmlwrapper.Text("Fail2ban"),
+						},
+					},
+					Href:     &h,
+					NavState: bootstrap.BsNavStateNormal,
+				},
+				{
+					Content: htmlwrapper.Text("FTP"),
+					DropDownItems: &[]*bootstrap.NavItem{
+						{
+							Href:          &h,
+							NavState:      bootstrap.BsNavStateNormal,
+							DropDownItems: &[]*bootstrap.NavItem{},
+							Content:       htmlwrapper.Text("FTP"),
+						},
+						{
+							Href:          &h,
+							NavState:      bootstrap.BsNavStateNormal,
+							DropDownItems: &[]*bootstrap.NavItem{},
+							Content:       htmlwrapper.Text("Fail2ban"),
+						},
+					},
+					Href:     &h,
+					NavState: bootstrap.BsNavStateNormal,
+				},
+			}, &c),
 		},
-	}))
+	})
+	// nv := bootstrap.NavBar("id", bootstrap.BsColorPrimary, bootstrap.BsLocationNormal, nil, bootstrap.Nav(true, true, bootstrap.BsNavJustifyContentLeft, bootstrap.BsNavKindNormal, []*bootstrap.NavItem{
+	// 	{
+	// 		Href:          &h,
+	// 		Content:       &htmlwrapper.TextElm{Content: "trsting"},
+	// 		NavState:      bootstrap.BsNavStateNormal,
+	// 		DropDownItems: &[]*bootstrap.NavItem{},
+	// 	},
+	// 	{
+	// 		Href:     &h,
+	// 		Content:  &htmlwrapper.TextElm{Content: "a"},
+	// 		NavState: bootstrap.BsNavStateNormal,
+	// 		DropDownItems: &[]*bootstrap.NavItem{
+	// 			{
+	// 				Href:          &h,
+	// 				Content:       &htmlwrapper.TextElm{"asdfadfs"},
+	// 				DropDownItems: &[]*bootstrap.NavItem{},
+	// 				NavState:      bootstrap.BsNavStateNormal,
+	// 			},
+	// 		},
+	// 	},
+	// }))
 	nvHTML, _ := nv.AsHTML()
 
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
