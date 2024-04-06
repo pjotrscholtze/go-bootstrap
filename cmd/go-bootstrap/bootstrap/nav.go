@@ -92,7 +92,7 @@ func NavLink(isDropdownToggle bool, navState BsNavState, content htmlwrapper.Elm
 		attrs["aria-expanded"] = "false"
 		colorClass := ""
 		if color != nil {
-			colorClass = "navbar-" + string(*color) + " bg-" + string(*color)
+			colorClass = " navbar-" + string(*color) + " bg-" + string(*color)
 		}
 		return &htmlwrapper.MultiElm{
 			Contents: []htmlwrapper.Elm{

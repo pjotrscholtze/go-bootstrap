@@ -86,7 +86,7 @@ func TestNavContentHrefActiveColor(t *testing.T) {
 	if err != nil {
 		t.Fatalf("Failed to make HTML! %s", err)
 	}
-	if html != "<nav class=\"navbar-nav   navbar-primary bg-primary\"><a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link active dropdown-toggle\" data-bs-toggle=\"dropdown\" href=\"link\" role=\"button\">test</a><div class=\"dropdown-menunavbar-primary bg-primary\"><a class=\"nav-link active\" href=\"link\">asd</a></div></nav>" {
+	if html != "<nav class=\"navbar-nav   navbar-primary bg-primary\"><a aria-expanded=\"false\" aria-haspopup=\"true\" class=\"nav-link active dropdown-toggle\" data-bs-toggle=\"dropdown\" href=\"link\" role=\"button\">test</a><div class=\"dropdown-menu navbar-primary bg-primary\"><a class=\"nav-link active\" href=\"link\">asd</a></div></nav>" {
 		t.Fatalf("HTML is not as expected!")
 	}
 }
