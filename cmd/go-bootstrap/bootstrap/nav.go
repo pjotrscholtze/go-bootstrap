@@ -44,19 +44,24 @@ func Nav(ulElement, vertical bool, justifyContent BsNavJustifyContent, tabKind B
 		Attrs:    attrs,
 		Contents: navContents,
 	}
-	for i, item := range content {
-		navContents[i] = recursivelyMakeNavLink(item)
-	}
 	if ulElement {
 		out.Tag = "ul"
-		for i, item := range navContents {
+		for i, item := range content {
+			class := "nav-item"
+			if item.DropDownItems != nil {
+				class += " dropdown"
+			}
 			navContents[i] = &htmlwrapper.HTMLElm{
 				Tag: "li",
 				Attrs: map[string]string{
-					"class": "nav-item",
+					"class": class,
 				},
-				Contents: []htmlwrapper.Elm{item},
+				Contents: []htmlwrapper.Elm{recursivelyMakeNavLink(item)},
 			}
+		}
+	} else {
+		for i, item := range content {
+			navContents[i] = recursivelyMakeNavLink(item)
 		}
 	}
 	return out
